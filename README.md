@@ -1,4 +1,4 @@
-# Rubyfu *the gem*
+# Rubyfu, the gem
 Rubyfu gem is a simple way to run and read Rubyfu book offline as it is online. This gem should be continuously updated as the online version gets updated, but it's not instantly syncing.
 
 ## How it works ?
@@ -47,7 +47,7 @@ This will generate a folder named `_book` contains HTML version of the book
 ```
 git clone https://github.com/[YOURUSER]/RubyfuGem.git
 ```
-4. Paste the generate HTML book (`_book`) folder in `rubyfu/_book` gem directory, then push it
+4. Paste the generateD HTML book (`_book`) folder in `rubyfu/_book` gem directory, then push it
 ```
 cp -a _book ../RubyfuGem/
 ```
