@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["king.sabri@gmail.com"]
 
   spec.summary       = %q{Rubyfu, where Ruby goes eveil!}
-  spec.description   = %q{Experiance-based Ruby for hackers book.}
+  spec.description   = %q{Experiance-based Ruby book for hackers.}
   spec.homepage      = "https://rubyfu.net"
   spec.license       = "CC BY-NC-SA"
 
@@ -20,6 +20,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "watir"
   
-  spec.add_development_dependency "bundler", "~> 1.11"
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "bundler"
+  spec.add_development_dependency "rake"
 end
