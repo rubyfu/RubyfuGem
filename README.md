@@ -59,8 +59,9 @@ git clone https://github.com/[YOURUSER]/RubyfuGem.git
 cp -a _book ../RubyfuGem/
 ```
 
-5. Crate a new pull request (PR)
+5. Crate a new pull request (PR) to https://github.com/rubyfu/RubyfuGem/
 
+To report any issue, please refere to [issues](https://github.com/rubyfu/RubyfuGem/issues)
 Done!
 
 ## Enhancing how the gem applicatin is working 
