@@ -1,4 +1,4 @@
-# Rubyfu, the gem
+# Rubyfu, the gem [![Gem Version](https://badge.fury.io/rb/rubyfu.svg)](https://badge.fury.io/rb/rubyfu)
 Rubyfu gem is a simple way to run and read Rubyfu book offline as it is online. This gem should be continuously updated as the online version gets updated, but it's not instantly syncing.
 
 ## How it works?
@@ -76,8 +76,19 @@ To report any issue, please refere to [issues](https://github.com/rubyfu/RubyfuG
 Done!
 
 ### Enhancing how the gem application is working 
-Currently, the gem misses and important mission which is the syncronization between the webrick and browser process so if you clos the browser, the webrick will keep working in the background.
 
+
+### Known Issues
+- The gem misses and important mission, which is the synchronization between the *webrick* and *browser process so if you close the browser, the webrick will keep working in the background.
+
+- Make gem update smarter 
+
+Currently, each time we update the book, we've to update the gem even we did nothing with the gem's code
+
+  - Gem's command-line should check the latest gem version
+  - Gem should check the latest book contents (create a repo, maybe?)
+  - If the gem is latestet, and book content is not, then the content only should get updated, make sense!
+  - If the gem is not latest then update the gem and gem update shall contain latest content.
 
 ### gem test
 
