@@ -1,0 +1,1386 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Packet manipulation | RubyFu</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-anchors/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+        <link rel="stylesheet" href="../styles/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="../module_0x3__network_kung_fu/arp_spoofing.html" />
+    
+    
+    <link rel="prev" href="../module_0x3__network_kung_fu/tns_enumeration.html" />
+    
+
+        <script type="text/javascript" src="../styles/header.js"></script>
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="3.10"
+        data-chapter-title="Packet manipulation"
+        data-filepath="module_0x3__network_kung_fu/packet_manipulation.md"
+        data-basepath=".."
+        data-revision="Sat Jan 23 2016 22:14:52 GMT+0300 (AST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Module 0x0 | Introduction
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="0.1" data-path="contribution.html">
+            
+                
+                    <a href="../contribution.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                        Contribution
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.2" data-path="beginners.html">
+            
+                
+                    <a href="../beginners.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.</b>
+                        
+                        Beginners
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.3" data-path="required_gems.html">
+            
+                
+                    <a href="../required_gems.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.3.</b>
+                        
+                        Required Gems
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="module_0x1__basic_ruby_kung_fu/index.html">
+            
+                
+                    <a href="../module_0x1__basic_ruby_kung_fu/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Module 0x1 | Basic Ruby Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="module_0x1__basic_ruby_kung_fu/string.html">
+            
+                
+                    <a href="../module_0x1__basic_ruby_kung_fu/string.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        String
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="module_0x1__basic_ruby_kung_fu/conversion.html">
+            
+                
+                    <a href="../module_0x1__basic_ruby_kung_fu/conversion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.1.</b>
+                        
+                        Conversion
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="module_0x1__basic_ruby_kung_fu/extraction.html">
+            
+                
+                    <a href="../module_0x1__basic_ruby_kung_fu/extraction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.2.</b>
+                        
+                        Extraction
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="module_0x1__basic_ruby_kung_fu/array.html">
+            
+                
+                    <a href="../module_0x1__basic_ruby_kung_fu/array.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Array
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="module_0x2__system_kung_fu/index.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Module 0x2 | System Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="module_0x2__system_kung_fu/command_execution.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/command_execution.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Command Execution
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="module_0x2__system_kung_fu/file_manipulation.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/file_manipulation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        File manipulation
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="module_0x2__system_kung_fu/parsing_html,_xml,_json.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/parsing_html,_xml,_json.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.1.</b>
+                        
+                        Parsing HTML, XML, JSON
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="module_0x2__system_kung_fu/cryptography.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/cryptography.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Cryptography
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="module_0x2__system_kung_fu/system_shell.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/system_shell.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Remote Shell
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="module_0x2__system_kung_fu/ncatrb.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/ncatrb.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.1.</b>
+                        
+                        Ncat.rb
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="module_0x2__system_kung_fu/rce_as_a_service.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/rce_as_a_service.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.2.</b>
+                        
+                        RCE as a Service
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="module_0x2__system_kung_fu/virustotal.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/virustotal.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        VirusTotal
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="module_0x3__network_kung_fu/index.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Module 0x3 | Network Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="module_0x3__network_kung_fu/ruby_socket.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/ruby_socket.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Ruby Socket
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="module_0x3__network_kung_fu/ssid_finder.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/ssid_finder.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        SSID Finder
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="module_0x3__network_kung_fu/ftp.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/ftp.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        FTP
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="module_0x3__network_kung_fu/ssh.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/ssh.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        SSH
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="module_0x2__system_kung_fu/email.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/email.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Email
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="module_0x2__system_kung_fu/smtp_enumeration.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/smtp_enumeration.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.1.</b>
+                        
+                        SMTP Enumeration
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="module_0x3__network_kung_fu/network_scanning.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/network_scanning.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Network Scanning
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1" data-path="module_0x3__network_kung_fu/nmap.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/nmap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.1.</b>
+                        
+                        Nmap
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="module_0x3__network_kung_fu/dns.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/dns.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        DNS
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.1" data-path="module_0x3__network_kung_fu/dns_enumeration.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/dns_enumeration.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.1.</b>
+                        
+                        DNS Enumeration
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="module_0x3__network_kung_fu/snmp_enumeration.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/snmp_enumeration.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        SNMP Enumeration
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="module_0x3__network_kung_fu/tns_enumeration.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/tns_enumeration.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        Oracle TNS Enumeration
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.10" data-path="module_0x3__network_kung_fu/packet_manipulation.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/packet_manipulation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.</b>
+                        
+                        Packet manipulation
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.1" data-path="module_0x3__network_kung_fu/arp_spoofing.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/arp_spoofing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.1.</b>
+                        
+                        ARP Spoofing
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.2" data-path="module_0x3__network_kung_fu/dns_spoofing.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/dns_spoofing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.2.</b>
+                        
+                        DNS Spoofing
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="module_0x4__web_kung_fu/index.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Module 0x4 | Web Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="module_0x4__web_kung_fu/sql_injection_scanner.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/sql_injection_scanner.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        SQL Injection Scanner
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="module_0x4__web_kung_fu/databases.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/databases.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Databases
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="module_0x4__web_kung_fu/extending_burpsuite.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/extending_burpsuite.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Extending Burp Suite
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="module_0x4__web_kung_fu/browser_manipulation.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/browser_manipulation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Browser Manipulation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="module_0x4__web_kung_fu/web_servcies_and_apis.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/web_servcies_and_apis.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Web Services and APIs
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.1" data-path="module_0x4__web_kung_fu/web_services.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/web_services.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.1.</b>
+                        
+                        Interacting with Web Services
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.2" data-path="module_0x4__web_kung_fu/interacting_with_apis.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/interacting_with_apis.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.2.</b>
+                        
+                        Interacting with APIs
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.2.1" data-path="module_0x4__web_kung_fu/wordpress_api.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/wordpress_api.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.2.1.</b>
+                        
+                        WordPress API
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.2.2" data-path="module_0x4__web_kung_fu/twitter_api.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/twitter_api.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.2.2.</b>
+                        
+                        Twitter API
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="module_0x4__web_kung_fu/ruby2javascript.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/ruby2javascript.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        Ruby 2 JavaScript
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="module_0x4__web_kung_fu/web_server_and_proxy.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/web_server_and_proxy.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        Web Server and Proxy
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="module_0x5__exploitation_kung_fu/index.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Module 0x5 | Exploitation Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="module_0x5__exploitation_kung_fu/fuzzer.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/fuzzer.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Fuzzer
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="module_0x5__exploitation_kung_fu/metasploit.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/metasploit.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Metasploit
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="module_0x5__exploitation_kung_fu/auxiliary_module.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/auxiliary_module.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.1.</b>
+                        
+                        Auxiliary module
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="module_0x5__exploitation_kung_fu/exploit_module.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/exploit_module.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.2.</b>
+                        
+                        Exploit module
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="module_0x5__exploitation_kung_fu/meterpreter.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/meterpreter.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.3.</b>
+                        
+                        Meterpreter
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.3.1" data-path="module_0x5__exploitation_kung_fu/extensions.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/extensions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.3.1.</b>
+                        
+                        API and Extensions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3.2" data-path="module_0x5__exploitation_kung_fu/meterpreter_scripting.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/meterpreter_scripting.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.3.2.</b>
+                        
+                        Meterpreter Scripting
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3.3" data-path="module_0x5__exploitation_kung_fu/railgun_api_extension.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/railgun_api_extension.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.3.3.</b>
+                        
+                        Railgun API Extension
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="module_0x5__exploitation_kung_fu/metasm.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/metasm.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        metasm
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="module_0x6__forensic/index.html">
+            
+                
+                    <a href="../module_0x6__forensic/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Module 0x6 | Forensic Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="module_0x6__forensic/windows_forensic.html">
+            
+                
+                    <a href="../module_0x6__forensic/windows_forensic.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Windows Forensic
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="module_0x6__forensic/android_forensic.html">
+            
+                
+                    <a href="../module_0x6__forensic/android_forensic.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Android Forensic
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="module_0x3__network_kung_fu/network_traffic_analysis.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/network_traffic_analysis.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        Network Traffic Analysis
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="module_0x6__forensic/parsing_log_files.html">
+            
+                
+                    <a href="../module_0x6__forensic/parsing_log_files.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        Parsing Log Files
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="references/index.html">
+            
+                
+                    <a href="../references/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        References
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="faqs/index.html">
+            
+                
+                    <a href="../faqs/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        FAQs
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="contributors/index.html">
+            
+                
+                    <a href="../contributors/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Contributors
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="contributors/todo.html">
+            
+                
+                    <a href="../contributors/todo.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        TODO
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >RubyFu</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="packet-manipulation"><a name="packet-manipulation" class="plugin-anchor" href="#packet-manipulation"><span class="fa fa-link"></span></a>Packet manipulation</h1>
+<p>In this chapter, we&apos;ll try to do variant implementations using the awesome lib, PacketFu<sup><a href="#fn_1" id="reffn_1">1</a></sup>.</p>
+<h2 id="packetfu--the-packet-manipulation"><a name="packetfu--the-packet-manipulation" class="plugin-anchor" href="#packetfu--the-packet-manipulation"><span class="fa fa-link"></span></a>PacketFu - The packet manipulation</h2>
+<p><strong>PacketFu Features</strong></p>
+<ul>
+<li>Manipulating TCP protocol</li>
+<li>Manipulating UDP protocol</li>
+<li>Manipulating ICMP protocol</li>
+<li>Packet Capturing - Support TCPdump style<sup><a href="#fn_2" id="reffn_2">2</a></sup></li>
+<li>Read and write PCAP files</li>
+</ul>
+<h3 id="installing-packetfu"><a name="installing-packetfu" class="plugin-anchor" href="#installing-packetfu"><span class="fa fa-link"></span></a>Installing PacketFu</h3>
+<p>Before installing packetfu gem you&apos;ll need to install <code>ruby-dev</code> and <code>libpcap-dev</code></p>
+<pre><code>apt-get -y install libpcap-dev
+</code></pre><p>then install packetfu and pcaprub(required for packet reading and writing from network interfaces)</p>
+<pre><code>gem install packetfu pcaprub
+</code></pre><h3 id="basic-usage"><a name="basic-usage" class="plugin-anchor" href="#basic-usage"><span class="fa fa-link"></span></a>Basic Usage</h3>
+<h4 id="get-your-interface-information"><a name="get-your-interface-information" class="plugin-anchor" href="#get-your-interface-information"><span class="fa fa-link"></span></a>Get your interface information</h4>
+<pre><code class="lang-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">&apos;packetfu&apos;</span>
+
+ifconfig = <span class="hljs-constant">PacketFu::Utils</span>.ifconfig(<span class="hljs-string">&quot;wlan0&quot;</span>)
+ifconfig[<span class="hljs-symbol">:iface</span>]
+ifconfig[<span class="hljs-symbol">:ip_saddr</span>]
+ifconfig[<span class="hljs-symbol">:eth_saddr</span>]
+</code></pre>
+<h4 id="get-mac-address-of-a-remote-host"><a name="get-mac-address-of-a-remote-host" class="plugin-anchor" href="#get-mac-address-of-a-remote-host"><span class="fa fa-link"></span></a>Get MAC address of a remote host</h4>
+<pre><code class="lang-ruby"><span class="hljs-constant">PacketFu::Utils</span>.arp(<span class="hljs-string">&quot;192.168.0.21&quot;</span>, <span class="hljs-symbol">:iface</span> =&gt; <span class="hljs-string">&quot;wlan0&quot;</span>)
+</code></pre>
+<h4 id="read-pcap-file"><a name="read-pcap-file" class="plugin-anchor" href="#read-pcap-file"><span class="fa fa-link"></span></a>Read Pcap file</h4>
+<pre><code class="lang-ruby"><span class="hljs-constant">PacketFu::PcapFile</span>.read_packets(<span class="hljs-string">&quot;file.pcap&quot;</span>)
+</code></pre>
+<h3 id="building-tcp-syn-packet"><a name="building-tcp-syn-packet" class="plugin-anchor" href="#building-tcp-syn-packet"><span class="fa fa-link"></span></a>Building TCP Syn packet</h3>
+<pre><code class="lang-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">&apos;packetfu&apos;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pkts</span></span>
+  <span class="hljs-comment">#$config = PacketFu::Config.new(PacketFu::Utils.whoami?(:iface=&gt; &quot;wlan0&quot;)).config     # set interface</span>
+  <span class="hljs-variable">$config</span> = <span class="hljs-constant">PacketFu::Config</span>.new(<span class="hljs-symbol">:iface=&gt;</span> <span class="hljs-string">&quot;wlan0&quot;</span>).config   <span class="hljs-comment"># use this line instead of above if you face `whoami?&apos;: uninitialized constant PacketFu::Capture (NameError)</span>
+
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment">#--&gt; Build TCP/IP</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment">#- Build Ethernet header:---------------------------------------</span>
+  pkt = <span class="hljs-constant">PacketFu::TCPPacket</span>.new(<span class="hljs-symbol">:config</span> =&gt; <span class="hljs-variable">$config</span> , <span class="hljs-symbol">:flavor</span> =&gt; <span class="hljs-string">&quot;Linux&quot;</span>)    <span class="hljs-comment"># IP header</span>
+  <span class="hljs-comment">#     pkt.eth_src = &quot;00:11:22:33:44:55&quot;        # Ether header: Source MAC ; you can use: pkt.eth_header.eth_src</span>
+  <span class="hljs-comment">#     pkt.eth_dst = &quot;FF:FF:FF:FF:FF:FF&quot;        # Ether header: Destination MAC ; you can use: pkt.eth_header.eth_dst</span>
+  pkt.eth_proto                                  <span class="hljs-comment"># Ether header: Protocol ; you can use: pkt.eth_header.eth_proto</span>
+  <span class="hljs-comment">#- Build IP header:---------------------------------------------</span>
+  pkt.ip_v     = <span class="hljs-number">4</span>                     <span class="hljs-comment"># IP header: IPv4 ; you can use: pkt.ip_header.ip_v</span>
+  pkt.ip_hl    = <span class="hljs-number">5</span>                     <span class="hljs-comment"># IP header: IP header length ; you can use: pkt.ip_header.ip_hl</span>
+  pkt.ip_tos   = <span class="hljs-number">0</span>                     <span class="hljs-comment"># IP header: Type of service ; you can use: pkt.ip_header.ip_tos</span>
+  pkt.ip_len   = <span class="hljs-number">20</span>                    <span class="hljs-comment"># IP header: Total Length ; you can use: pkt.ip_header.ip_len</span>
+  pkt.ip_id                            <span class="hljs-comment"># IP header: Identification ; you can use: pkt.ip_header.ip_id</span>
+  pkt.ip_frag  = <span class="hljs-number">0</span>                     <span class="hljs-comment"># IP header: Don&apos;t Fragment ; you can use: pkt.ip_header.ip_frag</span>
+  pkt.ip_ttl   = <span class="hljs-number">115</span>                   <span class="hljs-comment"># IP header: TTL(64) is the default ; you can use: pkt.ip_header.ip_ttl</span>
+  pkt.ip_proto = <span class="hljs-number">6</span>                     <span class="hljs-comment"># IP header: Protocol = tcp (6) ; you can use: pkt.ip_header.ip_proto</span>
+  pkt.ip_sum                           <span class="hljs-comment"># IP header: Header Checksum ; you can use: pkt.ip_header.ip_sum</span>
+  pkt.ip_saddr = <span class="hljs-string">&quot;2.2.2.2&quot;</span>             <span class="hljs-comment"># IP header: Source IP. use $config[:ip_saddr] if you want your real IP ; you can use: pkt.ip_header.ip_saddr</span>
+  pkt.ip_daddr = <span class="hljs-string">&quot;10.20.50.45&quot;</span>         <span class="hljs-comment"># IP header: Destination IP ; you can use: pkt.ip_header.ip_daddr</span>
+  <span class="hljs-comment">#- TCP header:-------------------------------------------------</span>
+  pkt.payload        = <span class="hljs-string">&quot;Hacked!&quot;</span>       <span class="hljs-comment"># TCP header: packet header(body)</span>
+  pkt.tcp_flags.ack  = <span class="hljs-number">0</span>               <span class="hljs-comment"># TCP header: Acknowledgment</span>
+  pkt.tcp_flags.fin  = <span class="hljs-number">0</span>               <span class="hljs-comment"># TCP header: Finish</span>
+  pkt.tcp_flags.psh  = <span class="hljs-number">0</span>               <span class="hljs-comment"># TCP header: Push</span>
+  pkt.tcp_flags.rst  = <span class="hljs-number">0</span>               <span class="hljs-comment"># TCP header: Reset</span>
+  pkt.tcp_flags.syn  = <span class="hljs-number">1</span>               <span class="hljs-comment"># TCP header: Synchronize sequence numbers</span>
+  pkt.tcp_flags.urg  = <span class="hljs-number">0</span>               <span class="hljs-comment"># TCP header: Urgent pointer</span>
+  pkt.tcp_ecn        = <span class="hljs-number">0</span>               <span class="hljs-comment"># TCP header: ECHO</span>
+  pkt.tcp_win        = <span class="hljs-number">8192</span>            <span class="hljs-comment"># TCP header: Window</span>
+  pkt.tcp_hlen       = <span class="hljs-number">5</span>               <span class="hljs-comment"># TCP header: header length</span>
+  pkt.tcp_src        = <span class="hljs-number">5555</span>            <span class="hljs-comment"># TCP header: Source Port (random is the default )</span>
+  pkt.tcp_dst        = <span class="hljs-number">4444</span>            <span class="hljs-comment"># TCP header: Destination Port (make it random/range for general scanning)</span>
+  pkt.recalc                           <span class="hljs-comment"># Recalculate/re-build whole pkt (should be at the end)</span>
+  <span class="hljs-comment">#--&gt; End of Build TCP/IP</span>
+
+  pkt_to_a = [pkt.to_s]
+  <span class="hljs-keyword">return</span> pkt_to_a
+<span class="hljs-keyword">end</span>
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">scan</span></span>
+  pkt_array = pkts.sort_by{rand}
+  puts <span class="hljs-string">&quot;-&quot;</span> * <span class="hljs-string">&quot; [-] Send Syn flag&quot;</span>.length + <span class="hljs-string">&quot;\n&quot;</span>  + <span class="hljs-string">&quot; [-] Send Syn flag &quot;</span> + <span class="hljs-string">&quot;\n&quot;</span>
+
+  inj = <span class="hljs-constant">PacketFu::Inject</span>.new(<span class="hljs-symbol">:iface</span> =&gt; <span class="hljs-variable">$config</span>[<span class="hljs-symbol">:iface</span>] , <span class="hljs-symbol">:config</span> =&gt; <span class="hljs-variable">$config</span>, <span class="hljs-symbol">:promisc</span> =&gt; <span class="hljs-keyword">false</span>)
+  inj.array_to_wire(<span class="hljs-symbol">:array</span> =&gt; pkt_array)        <span class="hljs-comment"># Send/Inject the packet through connection</span>
+
+  puts <span class="hljs-string">&quot; [-] Done&quot;</span> + <span class="hljs-string">&quot;\n&quot;</span> + <span class="hljs-string">&quot;-&quot;</span> * <span class="hljs-string">&quot; [-] Send Syn flag&quot;</span>.length
+<span class="hljs-keyword">end</span>
+
+scan
+</code></pre>
+<h3 id="simple-tcpdump"><a name="simple-tcpdump" class="plugin-anchor" href="#simple-tcpdump"><span class="fa fa-link"></span></a>Simple TCPdump</h3>
+<p>Lets see how we can</p>
+<pre><code class="lang-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">&apos;packetfu&apos;</span>
+
+capture = <span class="hljs-constant">PacketFu::Capture</span>.new(<span class="hljs-symbol">:iface=&gt;</span> <span class="hljs-string">&quot;wlan0&quot;</span>, <span class="hljs-symbol">:promisc</span> =&gt; <span class="hljs-keyword">true</span>, <span class="hljs-symbol">:start</span> =&gt; <span class="hljs-keyword">true</span>)
+capture.show_live
+</code></pre>
+<h3 id="simple-ids"><a name="simple-ids" class="plugin-anchor" href="#simple-ids"><span class="fa fa-link"></span></a>Simple IDS</h3>
+<p>This is a simple IDS will print source and destination of any communication has &quot;hacked&quot; payload</p>
+<pre><code class="lang-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">&apos;packetfu&apos;</span>
+
+capture = <span class="hljs-constant">PacketFu::Capture</span>.new(<span class="hljs-symbol">:iface</span> =&gt; <span class="hljs-string">&quot;wlan0&quot;</span>, <span class="hljs-symbol">:start</span> =&gt; <span class="hljs-keyword">true</span>, <span class="hljs-symbol">:filter</span> =&gt; <span class="hljs-string">&quot;ip&quot;</span>)
+loop <span class="hljs-keyword">do</span>
+  capture.stream.each <span class="hljs-keyword">do</span> |pkt|
+    packet = <span class="hljs-constant">PacketFu::Packet</span>.parse(pkt)
+    puts <span class="hljs-string">&quot;<span class="hljs-subst">#{<span class="hljs-constant">Time</span>.now}</span>: &quot;</span> + <span class="hljs-string">&quot;Source IP: <span class="hljs-subst">#{packet.ip_saddr}</span>&quot;</span> + <span class="hljs-string">&quot; --&gt; &quot;</span> + <span class="hljs-string">&quot;Destination IP: <span class="hljs-subst">#{packet.ip_daddr}</span>&quot;</span> <span class="hljs-keyword">if</span> packet.payload =~ <span class="hljs-regexp">/hacked/i</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Now try to Netcat any open port then send hacked</p>
+<pre><code>echo &quot;Hacked&quot; | nc -nv 192.168.0.15 4444
+</code></pre><p>return</p>
+<pre><code>2015-03-04 23:20:38 +0300: Source IP: 192.168.0.13 --&gt; Destination IP: 192.168.0.15
+</code></pre><h2 id=""><a name="" class="plugin-anchor" href="#"><span class="fa fa-link"></span></a><br><br><br></h2>
+<blockquote id="fn_1">
+<sup>1</sup>. <a href="https://github.com/packetfu/packetfu" target="_blank">PacketFu Homepage</a><a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#x21A9;</a>
+</blockquote>
+<blockquote id="fn_2">
+<sup>2</sup>. <a href="http://packetlife.net/media/library/12/tcpdump.pdf" target="_blank">TCPdump Cheat sheet</a><a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#x21A9;</a>
+</blockquote>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../module_0x3__network_kung_fu/tns_enumeration.html" class="navigation navigation-prev " aria-label="Previous page: Oracle TNS Enumeration"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../module_0x3__network_kung_fu/arp_spoofing.html" class="navigation navigation-next " aria-label="Next page: ARP Spoofing"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-book-summary-scroll-position-saver/book-summary-scroll-position-saver.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"addcssjs":{"js":["styles/header.js"]},"anchors":{},"todo":{},"splitter":{},"book-summary-scroll-position-saver":{},"expandable-chapters":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

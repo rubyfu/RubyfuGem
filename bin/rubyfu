@@ -1,0 +1,54 @@
+#!/usr/bin/env ruby
+
+# require 'rubyfu'
+require 'webrick'
+require 'watir'
+require 'optparse'
+
+
+=begin
+- No options
+  -- Run it on port 8888
+  -- Find browser and run it firefox/chrome
+- port 
+- browser
+- help
+=end
+
+
+options = {}
+
+opts = OptionParser.new do |opt|  
+  opt.separator  "Help menu:"
+  opt.on("-p","--port NUM","Port to listen on. Default 9911")     { |v| options[:port] = v }
+  opt.on("-b","--browser name","Browser to use. Default firefox") { |v| options[:browser] = v }
+  opt.banner = "Usage: rubyfu [OPTIONS]"
+  opt.on("-h","--help","Show the full help screen.") do
+    options[:help]
+    puts opts 
+    puts "\nExamples:"
+    puts "    rubyfu"
+    puts "    rubyfu --port --browser firefox"
+  end
+end
+
+begin 
+  opts.parse!  
+  options
+  ARGV
+  case
+    when options[:port]
+      puts "run rubyfu listening on #{options[:port]} port"
+    when options[:browser]
+      puts "run rubyfu with #{options[:browser]} browser"
+  else
+    # Just run rubyfu
+  end  
+rescue OptionParser::MissingArgument => e
+  puts "Error: #{e}\n\n"
+  puts opts
+end
+
+
+
+

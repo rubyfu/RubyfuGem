@@ -1,0 +1,1531 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Databases | RubyFu</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-anchors/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+        <link rel="stylesheet" href="../styles/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="../module_0x4__web_kung_fu/extending_burpsuite.html" />
+    
+    
+    <link rel="prev" href="../module_0x4__web_kung_fu/sql_injection_scanner.html" />
+    
+
+        <script type="text/javascript" src="../styles/header.js"></script>
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="4.2"
+        data-chapter-title="Databases"
+        data-filepath="module_0x4__web_kung_fu/databases.md"
+        data-basepath=".."
+        data-revision="Sat Jan 23 2016 22:14:52 GMT+0300 (AST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Module 0x0 | Introduction
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="0.1" data-path="contribution.html">
+            
+                
+                    <a href="../contribution.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                        Contribution
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.2" data-path="beginners.html">
+            
+                
+                    <a href="../beginners.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.2.</b>
+                        
+                        Beginners
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="0.3" data-path="required_gems.html">
+            
+                
+                    <a href="../required_gems.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.3.</b>
+                        
+                        Required Gems
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="module_0x1__basic_ruby_kung_fu/index.html">
+            
+                
+                    <a href="../module_0x1__basic_ruby_kung_fu/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Module 0x1 | Basic Ruby Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="module_0x1__basic_ruby_kung_fu/string.html">
+            
+                
+                    <a href="../module_0x1__basic_ruby_kung_fu/string.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        String
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="module_0x1__basic_ruby_kung_fu/conversion.html">
+            
+                
+                    <a href="../module_0x1__basic_ruby_kung_fu/conversion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.1.</b>
+                        
+                        Conversion
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="module_0x1__basic_ruby_kung_fu/extraction.html">
+            
+                
+                    <a href="../module_0x1__basic_ruby_kung_fu/extraction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.2.</b>
+                        
+                        Extraction
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="module_0x1__basic_ruby_kung_fu/array.html">
+            
+                
+                    <a href="../module_0x1__basic_ruby_kung_fu/array.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Array
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="module_0x2__system_kung_fu/index.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Module 0x2 | System Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="module_0x2__system_kung_fu/command_execution.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/command_execution.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Command Execution
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="module_0x2__system_kung_fu/file_manipulation.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/file_manipulation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        File manipulation
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="module_0x2__system_kung_fu/parsing_html,_xml,_json.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/parsing_html,_xml,_json.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.1.</b>
+                        
+                        Parsing HTML, XML, JSON
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="module_0x2__system_kung_fu/cryptography.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/cryptography.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Cryptography
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="module_0x2__system_kung_fu/system_shell.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/system_shell.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Remote Shell
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="module_0x2__system_kung_fu/ncatrb.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/ncatrb.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.1.</b>
+                        
+                        Ncat.rb
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="module_0x2__system_kung_fu/rce_as_a_service.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/rce_as_a_service.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.2.</b>
+                        
+                        RCE as a Service
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="module_0x2__system_kung_fu/virustotal.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/virustotal.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        VirusTotal
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="module_0x3__network_kung_fu/index.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Module 0x3 | Network Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="module_0x3__network_kung_fu/ruby_socket.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/ruby_socket.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Ruby Socket
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="module_0x3__network_kung_fu/ssid_finder.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/ssid_finder.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        SSID Finder
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="module_0x3__network_kung_fu/ftp.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/ftp.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        FTP
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="module_0x3__network_kung_fu/ssh.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/ssh.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        SSH
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="module_0x2__system_kung_fu/email.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/email.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Email
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="module_0x2__system_kung_fu/smtp_enumeration.html">
+            
+                
+                    <a href="../module_0x2__system_kung_fu/smtp_enumeration.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.1.</b>
+                        
+                        SMTP Enumeration
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="module_0x3__network_kung_fu/network_scanning.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/network_scanning.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Network Scanning
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1" data-path="module_0x3__network_kung_fu/nmap.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/nmap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.1.</b>
+                        
+                        Nmap
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="module_0x3__network_kung_fu/dns.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/dns.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        DNS
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.1" data-path="module_0x3__network_kung_fu/dns_enumeration.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/dns_enumeration.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.1.</b>
+                        
+                        DNS Enumeration
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="module_0x3__network_kung_fu/snmp_enumeration.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/snmp_enumeration.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        SNMP Enumeration
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="module_0x3__network_kung_fu/tns_enumeration.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/tns_enumeration.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        Oracle TNS Enumeration
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="module_0x3__network_kung_fu/packet_manipulation.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/packet_manipulation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.</b>
+                        
+                        Packet manipulation
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.10.1" data-path="module_0x3__network_kung_fu/arp_spoofing.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/arp_spoofing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.1.</b>
+                        
+                        ARP Spoofing
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10.2" data-path="module_0x3__network_kung_fu/dns_spoofing.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/dns_spoofing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.2.</b>
+                        
+                        DNS Spoofing
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="module_0x4__web_kung_fu/index.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Module 0x4 | Web Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="module_0x4__web_kung_fu/sql_injection_scanner.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/sql_injection_scanner.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        SQL Injection Scanner
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.2" data-path="module_0x4__web_kung_fu/databases.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/databases.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Databases
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="module_0x4__web_kung_fu/extending_burpsuite.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/extending_burpsuite.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Extending Burp Suite
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="module_0x4__web_kung_fu/browser_manipulation.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/browser_manipulation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Browser Manipulation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="module_0x4__web_kung_fu/web_servcies_and_apis.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/web_servcies_and_apis.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Web Services and APIs
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.1" data-path="module_0x4__web_kung_fu/web_services.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/web_services.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.1.</b>
+                        
+                        Interacting with Web Services
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.2" data-path="module_0x4__web_kung_fu/interacting_with_apis.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/interacting_with_apis.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.2.</b>
+                        
+                        Interacting with APIs
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.2.1" data-path="module_0x4__web_kung_fu/wordpress_api.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/wordpress_api.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.2.1.</b>
+                        
+                        WordPress API
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.2.2" data-path="module_0x4__web_kung_fu/twitter_api.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/twitter_api.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.2.2.</b>
+                        
+                        Twitter API
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="module_0x4__web_kung_fu/ruby2javascript.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/ruby2javascript.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        Ruby 2 JavaScript
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="module_0x4__web_kung_fu/web_server_and_proxy.html">
+            
+                
+                    <a href="../module_0x4__web_kung_fu/web_server_and_proxy.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        Web Server and Proxy
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="module_0x5__exploitation_kung_fu/index.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Module 0x5 | Exploitation Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="module_0x5__exploitation_kung_fu/fuzzer.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/fuzzer.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Fuzzer
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="module_0x5__exploitation_kung_fu/metasploit.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/metasploit.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Metasploit
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="module_0x5__exploitation_kung_fu/auxiliary_module.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/auxiliary_module.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.1.</b>
+                        
+                        Auxiliary module
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="module_0x5__exploitation_kung_fu/exploit_module.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/exploit_module.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.2.</b>
+                        
+                        Exploit module
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="module_0x5__exploitation_kung_fu/meterpreter.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/meterpreter.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.3.</b>
+                        
+                        Meterpreter
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.3.1" data-path="module_0x5__exploitation_kung_fu/extensions.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/extensions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.3.1.</b>
+                        
+                        API and Extensions
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3.2" data-path="module_0x5__exploitation_kung_fu/meterpreter_scripting.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/meterpreter_scripting.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.3.2.</b>
+                        
+                        Meterpreter Scripting
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3.3" data-path="module_0x5__exploitation_kung_fu/railgun_api_extension.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/railgun_api_extension.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.3.3.</b>
+                        
+                        Railgun API Extension
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="module_0x5__exploitation_kung_fu/metasm.html">
+            
+                
+                    <a href="../module_0x5__exploitation_kung_fu/metasm.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        metasm
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="module_0x6__forensic/index.html">
+            
+                
+                    <a href="../module_0x6__forensic/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Module 0x6 | Forensic Kung Fu
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="module_0x6__forensic/windows_forensic.html">
+            
+                
+                    <a href="../module_0x6__forensic/windows_forensic.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Windows Forensic
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="module_0x6__forensic/android_forensic.html">
+            
+                
+                    <a href="../module_0x6__forensic/android_forensic.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Android Forensic
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="module_0x3__network_kung_fu/network_traffic_analysis.html">
+            
+                
+                    <a href="../module_0x3__network_kung_fu/network_traffic_analysis.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        Network Traffic Analysis
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="module_0x6__forensic/parsing_log_files.html">
+            
+                
+                    <a href="../module_0x6__forensic/parsing_log_files.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        Parsing Log Files
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="references/index.html">
+            
+                
+                    <a href="../references/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        References
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="faqs/index.html">
+            
+                
+                    <a href="../faqs/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        FAQs
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="contributors/index.html">
+            
+                
+                    <a href="../contributors/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Contributors
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="contributors/todo.html">
+            
+                
+                    <a href="../contributors/todo.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        TODO
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >RubyFu</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="databases"><a name="databases" class="plugin-anchor" href="#databases"><span class="fa fa-link"></span></a>Databases</h1>
+<p>Dealing with database is a required knowledge in web testing and here we will go though most known databases and how to deal with it in ruby.</p>
+<h2 id="sqlite"><a name="sqlite" class="plugin-anchor" href="#sqlite"><span class="fa fa-link"></span></a>SQLite</h2>
+<ul>
+<li><p>To install sqlite3 gem </p>
+<pre><code>gem install sqlite3
+</code></pre><p>You&apos;ve have to have sqlite3 development libraries installed on your system</p>
+<pre><code>apt-get install libsqlite3-dev
+</code></pre></li>
+<li><p>Basic operations</p>
+</li>
+</ul>
+<pre><code class="lang-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">&quot;sqlite3&quot;</span>
+
+<span class="hljs-comment"># Open/Create a database</span>
+db = <span class="hljs-constant">SQLite3::Database</span>.new <span class="hljs-string">&quot;rubyfu.db&quot;</span>
+
+<span class="hljs-comment"># Create a table</span>
+rows = db.execute &lt;&lt;-<span class="hljs-constant">SQL</span> 
+  <span class="hljs-constant">CREATE</span> <span class="hljs-constant">TABLE</span> attackers (
+   id   <span class="hljs-constant">INTEGER</span> <span class="hljs-constant">PRIMARY</span> <span class="hljs-constant">KEY</span>   <span class="hljs-constant">AUTOINCREMENT</span>,
+   name <span class="hljs-constant">TEXT</span>    <span class="hljs-constant">NOT</span> <span class="hljs-constant">NULL</span>,
+   ip   <span class="hljs-constant">CHAR</span>(<span class="hljs-number">50</span>)
+);
+<span class="hljs-constant">SQL</span>
+
+<span class="hljs-comment"># Execute a few inserts</span>
+{
+  <span class="hljs-string">&apos;Anonymous&apos;</span>    =&gt; <span class="hljs-string">&quot;192.168.0.7&quot;</span>,
+  <span class="hljs-string">&apos;LulzSec&apos;</span>      =&gt; <span class="hljs-string">&quot;192.168.0.14&quot;</span>,
+  <span class="hljs-string">&apos;Lizard Squad&apos;</span> =&gt; <span class="hljs-string">&quot;192.168.0.253&quot;</span>
+}.each <span class="hljs-keyword">do</span> |attacker, ip|
+  db.execute(<span class="hljs-string">&quot;INSERT INTO attackers (name, ip) 
+              VALUES (?, ?)&quot;</span>, [attacker, ip])
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-comment"># Find a few rows</span>
+db.execute <span class="hljs-string">&quot;SELECT id,name,ip FROM attackers&quot;</span>
+
+<span class="hljs-comment"># List all tables</span>
+db.execute  <span class="hljs-string">&quot;SELECT * FROM sqlite_master where type=&apos;table&apos;&quot;</span>
+</code></pre>
+<h2 id="active-record"><a name="active-record" class="plugin-anchor" href="#active-record"><span class="fa fa-link"></span></a>Active Record</h2>
+<ul>
+<li>To install ActiveRecord <pre><code>gem install activerecord
+</code></pre></li>
+</ul>
+<h3 id="mysql-database"><a name="mysql-database" class="plugin-anchor" href="#mysql-database"><span class="fa fa-link"></span></a>MySQL database</h3>
+<ul>
+<li>To install MySQL adapter<pre><code>gem install mysql
+</code></pre></li>
+</ul>
+<p>Login to mysql console and create database <em>rubyfu_db</em> and table <em>attackers</em></p>
+<pre><code>create database rubyfu_db;
+
+grant all on rubyfu_db.* to &apos;root&apos;@&apos;localhost&apos;;
+
+create table attackers (
+  id int not null auto_increment,
+  name varchar(100) not null, 
+  ip text not null,  
+  primary key (id)  
+);  
+
+exit
+</code></pre><p>The outputs look like following </p>
+<pre><code>mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 41
+Server version: 5.5.44-0ubuntu0.14.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2015, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type &apos;help;&apos; or &apos;\h&apos; for help. Type &apos;\c&apos; to clear the current input statement.
+
+
+mysql&gt; create database rubyfu_db;
+Query OK, 1 row affected (0.00 sec)
+
+mysql&gt; grant all on rubyfu_db.* to &apos;root&apos;@&apos;localhost&apos;; 
+Query OK, 0 rows affected (0.00 sec)
+
+mysql&gt; use rubyfu_db;
+Database changed
+mysql&gt; create table attackers (
+    -&gt;   id int not null auto_increment,
+    -&gt;   name varchar(100) not null, 
+    -&gt;   ip text not null,  
+    -&gt;   primary key (id)  
+    -&gt; );  
+Query OK, 0 rows affected (0.01 sec)
+
+mysql&gt; exit
+</code></pre><p>Now, let&apos;s to connect to <em>rubyfu_db</em> database </p>
+<pre><code class="lang-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">&apos;active_record&apos;</span>  
+<span class="hljs-constant">ActiveRecord::Base</span>.establish_connection(  
+<span class="hljs-symbol">:adapter</span>  =&gt; <span class="hljs-string">&quot;mysql&quot;</span>,
+<span class="hljs-symbol">:username</span> =&gt; <span class="hljs-string">&quot;root&quot;</span>,
+<span class="hljs-symbol">:password</span> =&gt; <span class="hljs-string">&quot;root&quot;</span>,
+<span class="hljs-symbol">:host</span>     =&gt; <span class="hljs-string">&quot;localhost&quot;</span>,  
+<span class="hljs-symbol">:database</span> =&gt; <span class="hljs-string">&quot;rubyfu_db&quot;</span>  
+)  
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Attackers</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">ActiveRecord::Base</span></span>  </span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<ul>
+<li>Using the ActiveRecord library, available as the activerecord gem.</li>
+<li>Using the ActiveRecord adapter namely <em>mysql</em></li>
+<li>Establishing a connection to the database <em>rubyfu_db</em></li>
+<li>Creating a class called <em>Attackers</em> following the conventions mentioned above (attacker)</li>
+</ul>
+<pre><code class="lang-ruby"><span class="hljs-constant">Attackers</span>.create(<span class="hljs-symbol">:name</span> =&gt; <span class="hljs-string">&apos;Anonymous&apos;</span>,    <span class="hljs-symbol">:ip</span> =&gt; <span class="hljs-string">&quot;192.168.0.7&quot;</span>)  
+<span class="hljs-constant">Attackers</span>.create(<span class="hljs-symbol">:name</span> =&gt; <span class="hljs-string">&apos;LulzSec&apos;</span>,      <span class="hljs-symbol">:ip</span> =&gt; <span class="hljs-string">&quot;192.168.0.14&quot;</span>)  
+<span class="hljs-constant">Attackers</span>.create(<span class="hljs-symbol">:name</span> =&gt; <span class="hljs-string">&apos;Lizard Squad&apos;</span>, <span class="hljs-symbol">:ip</span> =&gt; <span class="hljs-string">&quot;192.168.0.253&quot;</span>)
+</code></pre>
+<p>You will observe that ActiveRecord examines the database tables themselves to find out which columns are available. This is how we were able to use accessor methods for participant.name without explicitly defining them: we defined them in the database, and ActiveRecord picked them up.</p>
+<p>You can find the item </p>
+<ul>
+<li>by id<pre><code>Attackers.find(1)
+</code></pre></li>
+<li>by name<pre><code>Attackers.find_by(name: &quot;Anonymous&quot;)
+</code></pre>Result <pre><code class="lang-ruby"><span class="hljs-comment">#&lt;Attackers:0x000000010a6ad0 id: 1, name: &quot;Anonymous&quot;, ip: &quot;192.168.0.7&quot;&gt;</span>
+</code></pre>
+</li>
+</ul>
+<p>or you can work it as object</p>
+<pre><code class="lang-ruby">attacker = <span class="hljs-constant">Attackers</span>.find(<span class="hljs-number">3</span>)
+attacker.id
+attacker.name
+attacker.ip
+</code></pre>
+<p>If you want to delete an item from the database, you can use the destroy (Deletes the record in the database) method of ActiveRecord::Base:</p>
+<pre><code class="lang-ruby"><span class="hljs-constant">Attackers</span>.find(<span class="hljs-number">2</span>).destroy
+</code></pre>
+<p>So to write a complete script, </p>
+<pre><code class="lang-ruby"><span class="hljs-comment">#!/usr/bin/env ruby</span>
+<span class="hljs-comment"># KING SABRI | <span class="hljs-doctag">@KINGSABRI</span></span>
+<span class="hljs-comment"># ActiveRecord with MySQL</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">&apos;active_record&apos;</span>  
+
+<span class="hljs-comment"># Connect to database</span>
+<span class="hljs-constant">ActiveRecord::Base</span>.establish_connection(
+                                        <span class="hljs-symbol">:adapter</span>  =&gt; <span class="hljs-string">&quot;mysql&quot;</span>,
+                                        <span class="hljs-symbol">:username</span> =&gt; <span class="hljs-string">&quot;root&quot;</span>,
+                                        <span class="hljs-symbol">:password</span> =&gt; <span class="hljs-string">&quot;root&quot;</span>,
+                                        <span class="hljs-symbol">:host</span>     =&gt; <span class="hljs-string">&quot;localhost&quot;</span>,  
+                                        <span class="hljs-symbol">:database</span> =&gt; <span class="hljs-string">&quot;rubyfu_db&quot;</span>  
+                                       )  
+
+<span class="hljs-comment"># Create Active Record Model for the table </span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Attackers</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">ActiveRecord::Base</span></span>  </span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-comment"># Create New Entries to the table </span>
+<span class="hljs-constant">Attackers</span>.create(<span class="hljs-symbol">:name</span> =&gt; <span class="hljs-string">&apos;Anonymous&apos;</span>,    <span class="hljs-symbol">:ip</span> =&gt; <span class="hljs-string">&quot;192.168.0.7&quot;</span>)  
+<span class="hljs-constant">Attackers</span>.create(<span class="hljs-symbol">:name</span> =&gt; <span class="hljs-string">&apos;LulzSec&apos;</span>,      <span class="hljs-symbol">:ip</span> =&gt; <span class="hljs-string">&quot;192.168.0.14&quot;</span>)  
+<span class="hljs-constant">Attackers</span>.create(<span class="hljs-symbol">:name</span> =&gt; <span class="hljs-string">&apos;Lizard Squad&apos;</span>, <span class="hljs-symbol">:ip</span> =&gt; <span class="hljs-string">&quot;192.168.0.253&quot;</span>)
+
+<span class="hljs-comment"># Interact with table items </span>
+attacker = <span class="hljs-constant">Attackers</span>.find(<span class="hljs-number">3</span>)
+attacker.id
+attacker.name
+attacker.ip
+
+<span class="hljs-comment"># Delete a table Item</span>
+<span class="hljs-constant">Attackers</span>.find(<span class="hljs-number">2</span>).destroy
+</code></pre>
+<h3 id="oracle-database"><a name="oracle-database" class="plugin-anchor" href="#oracle-database"><span class="fa fa-link"></span></a>Oracle database</h3>
+<ul>
+<li>Prerequisites</li>
+</ul>
+<p>in order to make <a href="http://www.rubydoc.info/gems/ruby-oci8/file/docs/install-full-client.md" target="_blank">ruby-oci8</a> -which is the main dependency for oracle driver- works you&apos;ve to do some extra steps: </p>
+<ul>
+<li>Download links for <a href="http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html" target="_blank">Linux</a> | <a href="http://www.oracle.com/technetwork/topics/winsoft-085727.html" target="_blank">Windows</a> | <a href="http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html" target="_blank">Mac</a> <ul>
+<li>instantclient-basic-[OS].[Arch]-[VERSION].zip</li>
+<li>instantclient-sqlplus-[OS].[Arch]-[VERSION].zip</li>
+<li>instantclient-sdk-[OS].[Arch]-[VERSION].zip</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Unzip downloaded files </li>
+</ul>
+<pre><code>unzip -qq instantclient-basic-linux.x64-12.1.0.2.0.zip
+unzip -qq instantclient-sdk-linux.x64-12.1.0.2.0.zip
+unzip -qq instantclient-sqlplus-linux.x64-12.1.0.2.0.zip
+</code></pre><ul>
+<li>Create system directories
+as root / sudo </li>
+</ul>
+<pre><code>mkdir -p /usr/local/oracle/{network,product/instantclient_64/12.1.0.2.0/{bin,lib,jdbc/lib,rdbms/jlib,sqlplus/admin/}}
+</code></pre><p>The file structure should be </p>
+<pre><code>/usr/local/oracle/
+&#x251C;&#x2500;&#x2500; admin
+&#x2502;   &#x2514;&#x2500;&#x2500; network
+&#x2514;&#x2500;&#x2500; product
+    &#x2514;&#x2500;&#x2500; instantclient_64
+        &#x2514;&#x2500;&#x2500; 12.1.0.2.0
+            &#x251C;&#x2500;&#x2500; bin
+            &#x251C;&#x2500;&#x2500; jdbc
+            &#x2502;   &#x2514;&#x2500;&#x2500; lib
+            &#x251C;&#x2500;&#x2500; lib
+            &#x251C;&#x2500;&#x2500; rdbms
+            &#x2502;   &#x2514;&#x2500;&#x2500; jlib
+            &#x2514;&#x2500;&#x2500; sqlplus
+                &#x2514;&#x2500;&#x2500; admin
+</code></pre><ul>
+<li>Move files </li>
+</ul>
+<pre><code>cd instantclient_12_1
+
+mv ojdbc* /usr/local/oracle/product/instantclient_64/12.1.0.2.0/jdbc/lib/
+mv x*.jar /usr/local/oracle/product/instantclient_64/12.1.0.2.0/rdbms/jlib/
+# rename glogin.sql to login.sql
+mv glogin.sql /usr/local/oracle/product/instantclient_64/12.1.0.2.0/sqlplus/admin/login.sql
+mv sdk /usr/local/oracle/product/instantclient_64/12.1.0.2.0/lib/
+mv *README /usr/local/oracle/product/instantclient_64/12.1.0.2.0/
+mv * /usr/local/oracle/product/instantclient_64/12.1.0.2.0/bin/
+# Symlink of instantclient
+cd /usr/local/oracle/product/instantclient_64/12.1.0.2.0/bin
+ln -s libclntsh.so.12.1 libclntsh.so
+ln -s ../lib/sdk sdk
+cd -
+</code></pre><ul>
+<li>Setup environment </li>
+</ul>
+<p>Append oracle environment variables in to <code>~/.bashrc</code> Then add the following:</p>
+<pre><code># Oracle Environment 
+export ORACLE_BASE=/usr/local/oracle
+export ORACLE_HOME=$ORACLE_BASE/product/instantclient_64/12.1.0.2.0
+export PATH=$ORACLE_HOME/bin:$PATH
+LD_LIBRARY_PATH=$ORACLE_HOME/bin
+export LD_LIBRARY_PATH
+export TNS_ADMIN=$ORACLE_BASE/admin/network
+export SQLPATH=$ORACLE_HOME/sqlplus/admin
+</code></pre><p>Then run:</p>
+<pre><code>source ~/.bashrc
+</code></pre><ul>
+<li>To install Oracle adapter<pre><code>gem install ruby-oci8 activerecord-oracle_enhanced-adapter
+</code></pre></li>
+</ul>
+<p>Now let&apos;s to connect </p>
+<pre><code>require &apos;active_record&apos;
+
+ActiveRecord::Base.establish_connection(
+                      :adapter  =&gt; &quot;oracle_enhanced&quot;,
+                      :database =&gt; &quot;192.168.0.13:1521/XE&quot;,
+                      :username =&gt; &quot;SYSDBA&quot;,
+                      :password =&gt; &quot;welcome1&quot;
+                       )
+
+class DBAUsers &lt; ActiveRecord::Base
+end
+</code></pre><h3 id="mssql-database"><a name="mssql-database" class="plugin-anchor" href="#mssql-database"><span class="fa fa-link"></span></a>MSSQL database</h3>
+<ul>
+<li>To install MSSQL adapter</li>
+</ul>
+<pre><code>gem install tiny_tds activerecord-sqlserver-adapter
+</code></pre><h2 id=""><a name="" class="plugin-anchor" href="#"><span class="fa fa-link"></span></a><br><br><br></h2>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../module_0x4__web_kung_fu/sql_injection_scanner.html" class="navigation navigation-prev " aria-label="Previous page: SQL Injection Scanner"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../module_0x4__web_kung_fu/extending_burpsuite.html" class="navigation navigation-next " aria-label="Next page: Extending Burp Suite"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-book-summary-scroll-position-saver/book-summary-scroll-position-saver.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"addcssjs":{"js":["styles/header.js"]},"anchors":{},"todo":{},"splitter":{},"book-summary-scroll-position-saver":{},"expandable-chapters":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
