@@ -1,6 +1,9 @@
 # Rubyfu *the gem*
 Rubyfu gem is a simple way to run and read Rubyfu book offline as it is online. This gem should be continuously updated as the online version gets updated, but it's not instantly syncing.
 
+## How it works ?
+Well, the gem contains and HTML version of the book and it uses `watir-webdriver` gem to open the html file which gets served by `Webrick` ruby web server. So the webserver will serve the book, the browser will open it on the localhost.
+
 ## How to use Rubyfu gem?
 
 - **Install rubyfu gem**
@@ -27,9 +30,37 @@ rubyfu -b firefox -p 9911
 
 # How to contribute
 There are several things that can be enhanced or contributed with,
-##  Updating the offline contents (super-easy)
+## Updating the offline contents (super-easy)
+
+1. Fork then clone the **Rubyfu book** repository
+```
+git clone https://github.com/[YOURUSER]/RubyFu.git
+```
+2. Generate/Build and HTML
+```
+cd Rubyfu
+gitbook install
+gitbook build 
+```
+This will generate a folder named `_book` contains HTML version of the book
+3. Fork then clone the **Rubyfu gem** repository
+```
+git clone https://github.com/[YOURUSER]/RubyfuGem.git
+```
+4. Paste the generate HTML book (`_book`) folder in `rubyfu/_book` gem directory, then push it
+```
+cp -a _book ../RubyfuGem/
+```
+
+5. Crate a new pull request (PR)
+
+Done!
 
 ## Enhancing how the gem applicatin is working 
+
+
+
+
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rubyfu`. To experiment with that code, run `bin/console` for an interactive prompt.
 
