@@ -11,8 +11,9 @@ Book   : http://Rubyfu.net
 class WebServer < WEBrick::HTTPServer
   
   def initialize(port)
+    bookpath = "#{File.dirname(__FILE__)}/../../_book"
     config = {:Port         => port,        # Optional
-              :DocumentRoot => '../_book',  # Don't change
+              :DocumentRoot => bookpath,  # Don't change
               :ServerName   => 'Rubyfu',    # Don't change 
               :Logger       => WEBrick::Log.new(File.open(File::NULL, 'w')),  # Disable WEBRick server logging
               :AccessLog    => []           # Disable WEBRick server access logging
