@@ -49,6 +49,7 @@ git clone https://github.com/[YOURUSER]/RubyFu.git
 ```
 
 2. Generate/Build an HTML
+Using [gitbook-cli](https://github.com/GitbookIO/gitbook-cli) application
 
 ```
 cd Rubyfu
