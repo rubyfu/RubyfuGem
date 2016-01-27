@@ -47,7 +47,7 @@ This will generate a folder named `_book` contains HTML version of the book
 ```
 git clone https://github.com/[YOURUSER]/RubyfuGem.git
 ```
-4. Paste the generateD HTML book (`_book`) folder in `rubyfu/_book` gem directory, then push it
+4. Paste the generated HTML book (`_book`) folder in `rubyfu/_book` gem directory, then push it
 ```
 cp -a _book ../RubyfuGem/
 ```
