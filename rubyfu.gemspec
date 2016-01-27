@@ -19,7 +19,8 @@ Gem::Specification.new do |gem|
   gem.files = Dir.glob("*.md")     +
               Dir.glob("Rakefile") +
               Dir.glob("lib/**/*") +
-              Dir.glob("bin/**/*")
+              Dir.glob("bin/**/*") +
+              Dir.glob("_book/**/*")
   
   gem.bindir        = "bin"
   gem.executables   = %w(rubyfu)
