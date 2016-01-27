@@ -3,23 +3,25 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'rubyfu/version'
 
-Gem::Specification.new do |spec|
-  spec.name          = "rubyfu"
-  spec.version       = Rubyfu::VERSION
-  spec.authors       = ["KINGSABRI"]
-  spec.email         = ["king.sabri@gmail.com"]
-
-  spec.summary       = %q{Rubyfu, where Ruby goes eveil!}
-  spec.description   = %q{Experiance-based Ruby book for hackers.}
-  spec.homepage      = "https://rubyfu.net"
-  spec.license       = "CC BY-NC-SA"
-
-  spec.bindir        = "bin"
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
-
-  spec.add_dependency "watir"
+Gem::Specification.new do |gem|
+  gem.name          = "rubyfu"
+  gem.version       = Rubyfu::VERSION
+  gem.summary       = %q{Rubyfu, where Ruby goes eveil!}
+  gem.description   = %q{Experiance-based Ruby book for hackers. This gem, allows you to browse the book offline}
+  gem.license       = "CC BY-NC-SA"
   
-  spec.add_development_dependency "bundler"
-  spec.add_development_dependency "rake"
+  gem.authors       = ["KINGSABRI"]
+  gem.email         = ["king.sabri@gmail.com"]
+  gem.homepage      = "https://rubyfu.net"
+
+  gem.add_dependency "watir"
+  
+  gem.files = Dir.glob("*.md")     +
+              Dir.glob("Rakefile") +
+              Dir.glob("lib/**/*") +
+              Dir.glob("bin/**/*")
+  
+  gem.bindir        = "bin"
+  gem.executables   = %w(rubyfu)
+  gem.require_paths = ["lib"]
 end
