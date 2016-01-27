@@ -33,21 +33,28 @@ There are several things that can be enhanced or contributed with,
 ## Updating the offline contents (super-easy)
 
 1. Fork then clone the **Rubyfu book** repository
+
 ```
 git clone https://github.com/[YOURUSER]/RubyFu.git
 ```
-2. Generate/Build and HTML
+
+2. Generate/Build an HTML
+
 ```
 cd Rubyfu
 gitbook install
 gitbook build 
 ```
 This will generate a folder named `_book` contains HTML version of the book
+
 3. Fork then clone the **Rubyfu gem** repository
+
 ```
 git clone https://github.com/[YOURUSER]/RubyfuGem.git
 ```
+
 4. Paste the generated HTML book (`_book`) folder in `rubyfu/_book` gem directory, then push it
+
 ```
 cp -a _book ../RubyfuGem/
 ```
@@ -57,7 +64,7 @@ cp -a _book ../RubyfuGem/
 Done!
 
 ## Enhancing how the gem applicatin is working 
-
+Currently, the gem misses and important mission which is the syncronization between the webrick and browser process so if you clos the browser, the webrick will keep working in the background.
 
 
 
