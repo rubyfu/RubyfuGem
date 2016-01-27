@@ -1,36 +1,24 @@
 #!/usr/bin/env ruby
-
-# require 'rubyfu'
-require 'webrick'
-require 'watir'
+$LOAD_PATH.unshift(File.dirname(__FILE__), "#{File.dirname(__FILE__)}/../lib")
+require 'rubyfu'
 require 'optparse'
-
-
-=begin
-- No options
-  -- Run it on port 8888
-  -- Find browser and run it firefox/chrome
-- port 
-- browser
-- help
-=end
-
 
 options = {}
 
 opts = OptionParser.new do |opt|  
   opt.separator  "Help menu:"
   opt.on("-p","--port NUM","Port to listen on. Default 9911")     { |v| options[:port] = v }
-  opt.on("-b","--browser name","Browser to use. Default firefox") { |v| options[:browser] = v }
+#   opt.on("-b","--browser name","Browser to use. Default firefox") { |v| options[:browser] = v }
   opt.banner = "Usage: rubyfu [OPTIONS]"
   opt.on("-h","--help","Show the full help screen.") do
     options[:help]
     puts opts 
     puts "\nExamples:"
     puts "    rubyfu"
-    puts "    rubyfu --port --browser firefox"
+    puts "    rubyfu --port 9911"
   end
 end
+
 
 begin 
   opts.parse!  
@@ -38,15 +26,21 @@ begin
   ARGV
   case
     when options[:port]
-      puts "run rubyfu listening on #{options[:port]} port"
-    when options[:browser]
-      puts "run rubyfu with #{options[:browser]} browser"
+      Rubyfu::Book.new(port: options[:port], agent: :ff).run
+      
+#     when options[:browser]
+#       puts "run rubyfu with #{options[:browser]} browser"
+#       pp Rubyfu::Book.new(:port => 9911, :agent => options[:browser]).run
+    when options[:help]
+      puts opts
+      exit 0
   else
-    # Just run rubyfu
+    Rubyfu::Book.new.run
   end  
 rescue OptionParser::MissingArgument => e
   puts "Error: #{e}\n\n"
   puts opts
+  exit 0
 end
 
 

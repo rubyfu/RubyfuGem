@@ -1,5 +1,11 @@
+=begin
 
+#=> Rubyfu, the gem 
 
+Author : Sabri Saleh | @KINGSABRI
+Book   : http://Rubyfu.net
+
+=end 
   
 # A wrapper for WEBrick::HTTPServer class, it updates its default values 
 class WebServer < WEBrick::HTTPServer
@@ -20,4 +26,4 @@ class WebServer < WEBrick::HTTPServer
   end
   
 end
-   
+

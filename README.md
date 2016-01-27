@@ -21,11 +21,21 @@ rubyfu
 Or use more options 
 ```
 rubyfu -h
+
+Usage: rubyfu [OPTIONS]
+Help menu:
+    -p, --port NUM                   Port to listen on. Default 9911
+    -h, --help                       Show the full help screen.
+
+Examples:
+    rubyfu
+    rubyfu --port 9911
 ```
+
 example
 
 ```
-rubyfu -b firefox -p 9911
+rubyfu -p 9911
 ```
 
 ## How to contribute
