@@ -64,7 +64,7 @@ cp -a _book ../RubyfuGem/
 To report any issue, please refere to [issues](https://github.com/rubyfu/RubyfuGem/issues)
 Done!
 
-## Enhancing how the gem applicatin is working 
+## Enhancing how the gem application is working 
 Currently, the gem misses and important mission which is the syncronization between the webrick and browser process so if you clos the browser, the webrick will keep working in the background.
 
 
