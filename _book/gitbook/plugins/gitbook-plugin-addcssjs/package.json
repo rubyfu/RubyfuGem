@@ -1,24 +1,36 @@
 {
   "name": "gitbook-plugin-addcssjs",
-  "version": "0.0.1",
-  "description": "Adds external CSS and js files to the gitbook",
+  "version": "1.0.1",
+  "description": "Adds external CSS and JS files to the gitbook",
+  "keywords": [
+    "CSS",
+    "JS",
+    "gitbook"
+  ],
+  "author": {
+    "name": "Olga Filipova",
+    "email": "chudaol@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chudaol/gitbook-plugin-addcssjs"
+  },
   "engines": {
     "gitbook": ">1.x.x"
   },
-  "gitHead": "3a26d3881c1d5740d8df7451f4392ceda00371d8",
-  "_id": "gitbook-plugin-addcssjs@0.0.1",
+  "license": "MIT",
+  "gitHead": "ca6b9326af68ed3092ecaa8c7d2f7b9597da89d4",
+  "bugs": {
+    "url": "https://github.com/chudaol/gitbook-plugin-addcssjs/issues"
+  },
+  "_id": "gitbook-plugin-addcssjs@1.0.1",
   "scripts": {},
-  "_shasum": "be544fd89acc867a0134c8ec90ae58ec92d62214",
-  "_from": "gitbook-plugin-addcssjs@0.0.1",
-  "_npmVersion": "2.8.4",
-  "_nodeVersion": "0.10.25",
+  "_shasum": "a0dd4a5c969ac52e3e1663d656f172a4fa70490f",
+  "_from": "gitbook-plugin-addcssjs@1.0.1",
+  "_npmVersion": "1.4.21",
   "_npmUser": {
     "name": "chudaol",
     "email": "chudaol@gmail.com"
-  },
-  "dist": {
-    "shasum": "be544fd89acc867a0134c8ec90ae58ec92d62214",
-    "tarball": "http://registry.npmjs.org/gitbook-plugin-addcssjs/-/gitbook-plugin-addcssjs-0.0.1.tgz"
   },
   "maintainers": [
     {
@@ -26,6 +38,10 @@
       "email": "chudaol@gmail.com"
     }
   ],
+  "dist": {
+    "shasum": "a0dd4a5c969ac52e3e1663d656f172a4fa70490f",
+    "tarball": "http://registry.npmjs.org/gitbook-plugin-addcssjs/-/gitbook-plugin-addcssjs-1.0.1.tgz"
+  },
   "directories": {},
-  "_resolved": "https://registry.npmjs.org/gitbook-plugin-addcssjs/-/gitbook-plugin-addcssjs-0.0.1.tgz"
+  "_resolved": "https://registry.npmjs.org/gitbook-plugin-addcssjs/-/gitbook-plugin-addcssjs-1.0.1.tgz"
 }

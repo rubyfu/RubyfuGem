@@ -67,7 +67,7 @@
         data-chapter-title="Ncat.rb"
         data-filepath="module_0x2__system_kung_fu/ncatrb.md"
         data-basepath=".."
-        data-revision="Sat Jan 23 2016 22:14:52 GMT+0300 (AST)"
+        data-revision="Wed Jan 27 2016 09:00:51 GMT+0300 (AST)"
         data-innerlanguage="">
     
 
@@ -1351,6 +1351,14 @@
 ncat = <span class="hljs-constant">NetCat</span>.new
 ncat.run(<span class="hljs-constant">ARGV</span>)
 </code></pre>
+<ul>
+<li><p>To listen </p>
+<pre><code>ruby ncat.rb -lvp 443
+</code></pre></li>
+<li><p>To connect </p>
+<pre><code>ruby ncat.rb -cv -r RHOST -p 443
+</code></pre></li>
+</ul>
 <h2 id="another-implementation-of-ncatrb"><a name="another-implementation-of-ncatrb" class="plugin-anchor" href="#another-implementation-of-ncatrb"><span class="fa fa-link"></span></a>Another Implementation of Ncat.rb</h2>
 <p>Again from <a href="https://github.com/Hood3dRob1n/" target="_blank">Hood3dRob1n</a> a standalone <a href="https://github.com/Hood3dRob1n/RubyCat" target="_blank">RubyCat</a> which supports password protection for bind shell.</p>
 <h2 id=""><a name="" class="plugin-anchor" href="#"><span class="fa fa-link"></span></a><br><br><br></h2>
