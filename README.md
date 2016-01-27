@@ -79,6 +79,17 @@ Done!
 Currently, the gem misses and important mission which is the syncronization between the webrick and browser process so if you clos the browser, the webrick will keep working in the background.
 
 
+### gem test
+
+```
+rake build
+```
+
+### gem publish
+```
+gem push pkg/
+```
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
